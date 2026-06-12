@@ -2,9 +2,20 @@
 <html lang="ru">
 
 <head>
+	<script>
+		const base = document.createElement('base');
+		const path = window.location.pathname;
+		const parts = path.split('/').filter(p => p); // убираем пустые части
+		if (parts.length > 0) {
+			base.href = '/' + parts[0] + '/';
+		} else {
+			base.href = '/';
+		}
+		document.head.appendChild(base);
+	</script>
+	<link rel="stylesheet" href="Style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/chokoladna-torta/Lesson_1/Style.css">
 	<title>Tortik</title>
 </head>
 
