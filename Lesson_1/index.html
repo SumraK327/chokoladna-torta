@@ -2,18 +2,6 @@
 <html lang="ru">
 
 <head>
-  <script>
-    const base = document.createElement('base');
-    const path = window.location.pathname;
-    const parts = path.split('/').filter(p => p);
-    if (parts[parts.length - 1].includes('.')) parts.pop();
-    if (parts.length > 0) {
-      base.href = '/' + parts.join('/') + '/';
-    } else {
-      base.href = '/';
-    }
-    document.head.appendChild(base);
-  </script>
   <link rel="stylesheet" href="./Style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
