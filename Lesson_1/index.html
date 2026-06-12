@@ -2,36 +2,37 @@
 <html lang="ru">
 
 <head>
-	<script>
-		const base = document.createElement('base');
-		const path = window.location.pathname;
-		const parts = path.split('/').filter(p => p); // убираем пустые части
-		if (parts.length > 0) {
-			base.href = '/' + parts[0] + '/';
-		} else {
-			base.href = '/';
-		}
-		document.head.appendChild(base);
-	</script>
-	<link rel="stylesheet" href="Style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tortik</title>
+  <script>
+    const base = document.createElement('base');
+    const path = window.location.pathname;
+    const parts = path.split('/').filter(p => p);
+    if (parts[parts.length - 1].includes('.')) parts.pop();
+    if (parts.length > 0) {
+      base.href = '/' + parts.join('/') + '/';
+    } else {
+      base.href = '/';
+    }
+    document.head.appendChild(base);
+  </script>
+  <link rel="stylesheet" href="Style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tortik</title>
 </head>
 
 <body>
-	<div class="Main">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum neque consectetur quo itaque
-		tempore
-		voluptatem id cupiditate rerum doloremque officiis.
-	</div>
-	<div class="img-box">
-		<img src="img/20260607_154157.jpg" alt="">
-		<img src="img/20260607_154210.jpg" alt="">
-		<img src="img/20260607_154215.jpg" alt="">
-		<img src="img/1.jpg" alt="">
-		<img src="img/2.jpg" alt="">
-		<img src="img/3.jpg" alt="">
-	</div>
+  <div class="Main">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum neque consectetur quo itaque
+    tempore
+    voluptatem id cupiditate rerum doloremque officiis.
+  </div>
+  <div class="img-box">
+    <img src="img/20260607_154157.jpg" alt="">
+    <img src="img/20260607_154210.jpg" alt="">
+    <img src="img/20260607_154215.jpg" alt="">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+  </div>
 </body>
 
 </html>
