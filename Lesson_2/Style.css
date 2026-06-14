@@ -22,3 +22,16 @@ video {
   text-decoration: underline;
   color: #fc0000;
 }
+.back {
+  margin: 0 auto;
+  padding: 0 0 30px 0;
+  text-align: center;
+}
+.back button {
+  padding: 10px 20px;
+  background: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
