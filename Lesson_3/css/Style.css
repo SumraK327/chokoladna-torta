@@ -1,0 +1,84 @@
+.container {
+  margin: 0 auto;
+  padding: 0px;
+  max-width: 1240px;
+}
+.back {
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+}
+.section {
+	margin: 0 0 30px 0;
+	padding: 10px;
+	border: 1px solid rgba(150, 101, 240, 0.4) ;
+	text-align: center;
+}
+.section a {
+	border-right: 2px solid rgba(150, 101, 240, 0.685);
+}
+.section li:last-child a{
+  border-right: none;
+}
+.section nav ul{
+	display: flex;
+	justify-content: center;	
+
+}
+.form1 {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.form1 input {
+	display: block;
+	margin: 5px auto;
+	background: #000;
+	border: 1px solid rgba(150, 101, 240, 0.685);
+	color: #fff;
+}
+.form1 textarea {
+	display: block;
+	margin: 5px auto;
+	background: #000;
+	border: 1px solid rgba(150, 101, 240, 0.685);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+.form1__buttons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.form1 input, .form1 textarea {
+	width: 100%;
+}
+.form1 fieldset {
+	padding: 5px;
+	border: 1px solid rgba(150, 101, 240, 0.685);
+}
+.form1__box-input {
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	max-width: 300px;
+}
+.form1__box1 {
+	margin: 0 auto;
+	max-width: 300px;
+	text-align: left;
+}
+.form1__box1 .label {
+	border: 0px solid rgba(150, 101, 240, 0.685);
+	display: block;
+}
+.form1__box1 .checkbox {
+	width: 20px; 
+	display: inline;
+}
+/*. {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+	*/

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="./css/Reset.CSS" />
+    <link rel="stylesheet" href="./css/Style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tortik</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+			<div class="back">
+        <button onclick="history.back()">← Назад</button>
+      </div>
+			<div class="section">
+				<p>Сидел игрался с кодом. Решил за автором видео урока не повторять на 100% </br>
+				Я незнаю почему, но у меня в vsCode как будто установлен ии который постоянно подсказывает какие команды вводить. 
+				</p>
+				<p> 
+					Я конечно же вникаю что в видео уроке говорят, но и то что я делаю сам тоже бездумно не тыкаю. 
+				</p>
+				<p> 
+					Почему то даже получилось сразу и под мобильные экраны сделать :) 
+				</p>
+			</div>
+			<div class="section"> 
+				
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem mollitia, ipsa magni quibusdam unde eos eius, reiciendis repellendus quae ipsam vitae qui quisquam modi molestiae? Odit adipisci at cupiditate harum eius rerum delectus est, alias tempora facilis tempore perspiciatis ducimus saepe molestiae, cumque deleniti, velit doloremque! Ab at officia eum?</p>
+				<h1>Заголовок h1</h1>
+				<h2>Заголовок h2</h2>	
+				<h3>Заголовок h3</h3>
+				<h4>Заголовок h4</h4>
+				<h5>Заголовок h5</h5>
+				<h6>Заголовок h6</h6>
+				<nav>
+					<ul>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="section">
+				<div class="form1">
+					<form>
+						<fieldset>
+							<legend>&nbsp;Форма обратной связи&nbsp;</legend>
+							<div class="form1__box-input">
+								
+								<input type="text" name="name" placeholder="Введите ваше имя" required />
+								<input type="email" name="email" placeholder="Введите ваш email" required />
+								<input type="tel" name="phone" inputmode="tel" placeholder="Введите ваш телефон" required />
+								<input type="number" name="age" placeholder="Введите ваш возраст">
+								<input type="date" name="date" placeholder="Введите дату"> 
+								<textarea name="message" placeholder="Введите ваше сообщение"></textarea>
+							</div>
+							<div class="form1__box1">
+								<fieldset>
+									<legend>&nbsp;Ваш любимый цвет&nbsp;</legend>
+									<label class="label" for="">
+										<input class="checkbox" type="checkbox" name="agreement"  />
+										Мокрый асфальт
+									</label>
+									<label class="label" for="">
+										<input class="checkbox" type="checkbox" name="agreement"  />
+										Серебристый бриз
+									</label>
+									<label class="label" for="">
+										<input class="checkbox" type="checkbox" name="agreement"  />
+										Синий лёд
+									</label>
+									<label class="label" for="">
+										<input class="checkbox" type="checkbox" name="agreement"  />
+										Оливковый сад
+									</label>
+									<label class="label" for="">
+										<input class="checkbox" type="checkbox" name="agreement"  />
+										Серо буро
+									</label>
+								</fieldset>
+							</div>
+							<div class="form1__box1">	
+								<fieldset>	
+									<legend>&nbsp;Выберете филиал&nbsp;</legend>
+									<label class="label" for="branch1">
+										<input class="checkbox" type="radio" name="branch" id="branch1" value="branch1" required />
+										На ул. Красной
+									</label>
+									<label class="label" for="branch2">
+										<input class="checkbox" type="radio" name="branch" id="branch2" value="branch2" required />
+										На ул. Одеской
+									</label>
+									<label class="label" for="branch3">
+										<input class="checkbox" type="radio" name="branch" id="branch3" value="branch3" required />
+										На ул. Ленина
+									</label>
+									<label class="label" for="branch4">
+										<input class="checkbox" type="radio" name="branch" id="branch4" value="branch4" required />
+										На ул. Северной
+									</label>
+								</fieldset>
+							</div>
+							<div class="form1__box1">
+								<fieldset>
+									<legend>&nbsp;Когда можно вам перезвонить&nbsp;</legend>
+									<select name="time" required>
+										<option value="" disabled selected>Выберите время</option>
+										<option value="9-12">9:00 - 12:00</option>
+										<option value="12-15">12:00 - 15:00</option>
+										<option value="15-18">15:00 - 18:00</option>
+										<option value="18-21">18:00 - 21:00</option>
+									</select>
+								</fieldset>
+							</div>
+							<div class="form1__buttons">
+								<button type="reset">Очистить</button>
+								<button type="submit">Отправить</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+  </body>
+</html>
