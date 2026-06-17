@@ -6,7 +6,7 @@ border: 3px solid blue;
   border: 0px solid blue;
   margin: 0 auto;
   padding: 0 0 0 0;
-  width: 1200px;
+  max-width: 1200px;
 }
 img {
   width: 100%;
