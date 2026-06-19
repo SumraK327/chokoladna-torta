@@ -53,7 +53,7 @@ main {
   font-weight: 400;
   font-style: normal;
 }
-h2 {
+h1 {
 	margin: 0 0 40px 0;
 	max-width: 596px;
 	font-family: "Oswald", sans-serif;
@@ -71,13 +71,14 @@ main img {
 main video {
 	margin: 0 0 40px 0;
 }
-h3 {
+h2 {
 	margin: 0 0 40px 0;
 	font-family: "Oswald", sans-serif;
 	font-weight: 600;
 	font-size: 36px;
 	line-height: 115%;
 	text-transform: uppercase;
+	color: #2C332F;
 }
 . {
 	margin: 0 0 0 0;
