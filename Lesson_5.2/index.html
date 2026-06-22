@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/Reset.css" />
+    <link rel="stylesheet" href="./css/Style.css" />
+    <link rel="stylesheet" href="./css/Article.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/Style.css">
+    <title>Tortik</title>
+  </head>
+
+  <body>
+		<div class="back">
+			<a href="https://sumrak327.github.io/chokoladna-torta/">
+				<button>← Назад</button>
+			</a>
+    </div>
+		<header>
+			<div class="container">
+				<div class="header flex">
+					<div class="logo">
+						<a href="https://sumrak327.github.io/chokoladna-torta/Lesson_5/index.html"><img src="./img/Frame.png" alt=""></a>
+					</div>
+					<nav class="menu">
+						<ul class="flex">
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Wiki</a></li>
+							<li><a href="#">Цены</a></li>
+						</ul>
+					</nav>
+					<div class="number">
+						<div class="number__text">
+							Первое посещение бесплатно
+						</div>
+						<div class="number__telephone">
+							<a href="tel:+79282822882">+7 (928) 282-28-82</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="section1">
+				<div class="container">
+					<div class="remark">
+						На статью не обращаем внимание, я просто тренеровался с добавление after и before. Добавил галочки вместо 
+						точек<a href="#points">туть</a></br>
+						А вот на счет<a href="#form">формы для записи</a>Так же не стал повторять все за автором видео. Сделал по другому. Я дизайне, я так вижу ))</br>
+						checkbox реализовать получилось через svg
+					</div>
+					<article>
+						<h1>Открытие нового  филиала в центре города!</h1>
+						<p>Фитнес клуб «Bonsai» рад сообщить об открытии нового филиала в центре города. Новый клуб расположен в удобном месте, рядом с остановками общественного транспорта, что делает его доступным для всех жителей города. Новое просторное помещение оборудовано современными тренажёрами, зонами для групповых занятий и отдыха, а также сауной и бассейном.</p>
+						<p>Кроме того, в "Bonsai" работают опытные тренеры, которые помогут составить индивидуальную программу тренировок и диеты для достижения желаемых результатов. Клиенты могут также воспользоваться услугами персональных тренировок и консультаций по здоровому образу жизни.
+						</p>
+						<img src="./img/gym-image.jpg" alt="Фитнес-клуб" />
+						<h2>Групповые занятия</h2>
+						<p>В новом филиале «Bonsai» будут проводиться различные групповые занятия. Каждый клиент сможет подобрать подходящий ему вид занятий и найти комфортную среду для тренировок. Запишись на первое бесплатное занятие и открой для себя мир фитнеса!</p>
+						<ul>
+							<div id="points"></div>
+							<li>Йога — гибкость, баланс и расслабление</li>
+							<li>Пилатес — укрепление мышц корпуса и осанка</li>
+							<li>Сайклинг — кардио на велотренажёрах под музыку</li>
+							<li>Силовая тренировка — работа с весами на все группы мышц</li>
+							<li>Функциональный тренинг — упражнения на координацию и выносливость</li>
+							<li>Стретчинг — растяжка и подвижность суставов</li>
+							<li>Тай-бо — боевые искусства + аэробика</li>
+							<li>Zumba — танцевальное кардио под латиноамериканские ритмы</li>
+						</ul>
+						<h2>Обзор нового филиала</h2>
+						<video src="./video/gym-video.mp4" controls loop muted autoplay></video>
+						<p>Приглашаем всех желающих посетить новый филиал фитнес-клуба «Bonsai» и начать заботиться о своём здоровье и фитнесе прямо сейчас! Не откладывай на завтра то, что можно начать сегодня. Твоё тело скажет спасибо! </p>
+						<p>Мы подготовили для тебя современные тренажёры, просторные залы для групповых занятий и команду профессиональных тренеров, которые помогут на каждом этапе. Приходи один или с друзьями — у нас комфортно каждому, независимо от уровня подготовки. «Bonsai» — это место, где спорт становится образом жизни, а каждая тренировка приносит удовольствие и результат.</p>
+					</article>
+				</div>
+			</section>
+			<section class="section2">
+				<div class="container">
+					<div id="form"></div>
+					<form action="" class="form1">
+						<h3>Форма записи</h3>
+						<div class="form1__input">
+							<input type="text" name="name" placeholder="Введите ваше имя" required />
+							<input type="email" name="email" placeholder="Введите ваш email" required />
+							<input type="number" id="age" name="age" placeholder="Введите ваш возраст" min="1" max="120" required>
+							<input type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+							<textarea id="message" name="message" rows="5" placeholder="Ваше сообщение..." required></textarea>
+							<label>
+								<input class="checkbox" type="checkbox" name="agree" required>
+								<span>Согласен с правилами</span>
+							</label>
+							<div class="form1__button">
+								<input class="button" type="reset">
+								<input class="button" type="submit" >
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="container"></div>
+		</footer>
+	</body>
+</html>
