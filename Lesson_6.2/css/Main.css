@@ -60,6 +60,8 @@ body > section {
   max-width: 492px;
   display: flex;
   flex-direction: column;
+  border: 0px solid rgba(150, 101, 240, 0.685);
+  transition: none;
 }
 .program__box-l p {
   margin: 0 0 clamp(60px, 10vw, 140px) 0;
@@ -102,7 +104,8 @@ body > section {
   background: #504df0;
 }
 .program__box-r {
-  max-width: 700px;
+  max-width: 705px;
+  border: 0px solid rgba(150, 101, 240, 0.685);
 }
 
 @media (max-width: 1024px) {
@@ -161,11 +164,15 @@ body > section {
   width: 284px;
   border: 1px solid #d3cbd9;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 .news-article footer {
-  padding: 20px;
+  margin-top: auto;
 }
 .news-article time {
+  margin: 20px 0 0 20px;
+  display: block;
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -174,7 +181,7 @@ body > section {
   color: #858e8a;
 }
 .news-article h3 {
-  padding: 0 0 12px 0;
+  margin: 8px 0 0 20px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -182,6 +189,8 @@ body > section {
   color: #2c332f;
 }
 .news-article a {
+  display: inline-block;
+  margin: 12px 0 20px 20px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -197,6 +206,7 @@ body > section {
 .news-link::after {
   content: "";
   background: url(../img/arrow-article.svg);
+  margin: 0 0 0 5px;
   width: 22px;
   height: 9px;
   display: inline-block;

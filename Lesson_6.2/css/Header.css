@@ -5,6 +5,7 @@
   min-height: 105px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 0 clamp(30px, 6vw, 60px) 0;
 }
 .header__logo {
