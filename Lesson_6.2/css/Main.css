@@ -107,6 +107,9 @@ body > section {
   max-width: 705px;
   border: 0px solid rgba(150, 101, 240, 0.685);
 }
+.program__box-r p {
+  padding: 5px 0 40px 0;
+}
 
 @media (max-width: 1024px) {
   .flex-program {
