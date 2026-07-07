@@ -14,7 +14,7 @@
 .remark {
   border: 2px solid #fc2727;
   padding: 5px;
-  margin: -50px 0 clamp(30px, 6vw, 50px) 0;
+  margin: 0 0 clamp(30px, 6vw, 50px) 0;
 }
 body > section {
   margin: 0 0 clamp(60px, 10vw, 140px) 0;
