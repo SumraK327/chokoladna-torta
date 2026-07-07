@@ -279,11 +279,12 @@ summary {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  gap: 10px;
   cursor: pointer;
+  gap: 10px;
 }
 summary::after {
   content: "";
+  flex-shrink: 0;
   display: inline-block;
   width: 17px;
   height: 22px;
