@@ -64,7 +64,7 @@ body > section {
   transition: none;
 }
 .program__box-l p {
-  margin: 0 0 clamp(60px, 10vw, 140px) 0;
+  margin: 0 0 clamp(20px, 6vw, 140px) 0;
   max-width: 439px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
@@ -119,8 +119,6 @@ strong {
   .program__box-r {
     order: 1;
   }
-}
-@media (max-width: 768px) {
   .program__box-l .button {
     margin: 0 auto;
   }
