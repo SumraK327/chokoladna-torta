@@ -1,0 +1,47 @@
+.flex {
+  display: flex;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1270px;
+  padding: 0 15px;
+}
+.back {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(150, 101, 240, 0.685);
+}
+.remark {
+  border: 2px solid #fc2727;
+  margin: 20px 0 40px 0;
+  padding: 5px;
+}
+.main {
+  border: 0px solid rgba(150, 101, 240, 0.685);
+  min-height: 220px;
+  flex: 1;
+}
+/*------------------- menu -------------------*/
+.menu__list {
+  display: flex;
+  gap: 30px;
+}
+.menu__link {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 130%;
+  color: var(--link-color);
+}
+/*------------------- /menu -------------------*/
+/*------------------- 1 -------------------*/
+/*------------------- /1 -------------------*/
+/*
+. {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	max-width: ;
+	min-height: ;
+	border: 1px solid rgba(150, 101, 240, 0.685);
+}
+	*/

@@ -1,0 +1,26 @@
+:root {
+  /* fonts */
+  --font-family: "Montserrat", sans-serif;
+
+  /* colors */
+  --bg-color: #2a2a29;
+  --main-color: #fff;
+  --heading-color: #fff;
+  --disable-color: #5d5d56;
+  --secondary-color: #c9c69b;
+  --accent-color: #ffea00;
+  --shadow-color: #181817;
+
+  --link-color: #fff;
+  --link-hover-color: #ffea00;
+
+  --color-button-bg: #b39ddb;
+  --color-button-text: #0a0a0a;
+
+  /* transitions */
+  --transition-time: 0.5s;
+
+  /* container */
+  --container-width: ;
+  --container-padding:  ;
+}
