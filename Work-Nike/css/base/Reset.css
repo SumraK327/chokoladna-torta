@@ -13,7 +13,10 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 200vh;
+}
+.body--no-scroll {
+  overflow-y: hidden;
 }
 
 /* ===== Универсальный сброс отступов и box-sizing ===== */

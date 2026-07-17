@@ -22,6 +22,11 @@
   align-items: center;
   gap: 60px;
 }
+@media (max-width: 1024px) {
+  .header__controls {
+    gap: 20px;
+  }
+}
 .header__logo {
   width: 50px;
   height: 17px;
@@ -43,8 +48,6 @@
 
 .header__actions {
   display: flex;
-  border: 1px solid rgba(150, 101, 240, 0.685);
-  width: 300px;
   gap: 20px;
   align-items: center;
 }
@@ -52,9 +55,31 @@
   width: 24px;
   height: 24px;
 }
-.header__menu {
-  margin: 0 0 0 clamp(20px, -9.167rem + 18.52vw, 120px);
-  flex-grow: 1;
+
+@media (max-width: 768px) {
+  .header__menu {
+    padding: 144px 15px 15px 0;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    bottom: 0;
+    background: var(--bg-color);
+    min-width: 297px;
+    z-index: 100;
+    box-shadow: -2px 0 20px 0 var(--shadow-color);
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header__menu .menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+  }
+  .header__menu--open {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .header__order {
   position: relative;
@@ -88,19 +113,34 @@
   opacity: 0;
   visibility: hidden;
 }
-/* .header__order::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 90%;
-  min-height: 11px;
-  transform: translate(-50%, -50%);
-  background-color: var(--accent-color);
-  border-radius: 50%;
-  filter: blur(30px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-time), visibility var(--transition-time);
-} */
+/*---------------- burger ----------------*/
+.burger {
+  color: var(--accent-color);
+}
+@media (width > 768px) {
+  .burger {
+    display: none;
+  }
+  .header__menu {
+    margin: 0 0 0 clamp(20px, -9.167rem + 18.52vw, 120px);
+    flex-grow: 1;
+    transition: none;
+  }
+}
+@media (width <= 768px) {
+  .burger {
+    position: relative;
+    z-index: 100;
+  }
+  .burger__icon-menu,
+  .burger--open .burger__icon-cross {
+    display: block;
+  }
+
+  .burger__icon-cross,
+  .burger--open .burger__icon-menu {
+    display: none;
+  }
+}
+
+/*---------------- /burger ----------------*/

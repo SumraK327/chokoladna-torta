@@ -19,7 +19,7 @@
         <button class="button">← Назад</button>
       </a>
     </div>
-    <div id="header" class="header--fixed"></div>
+    <div id="header" class="header header--fixed"></div>
     <main class="main">
       <div class="container">
         <div class="remark">
@@ -28,42 +28,28 @@
           <p>2:20</p>
         </div>
         <a href="#">Далеко-далеко за словесными</a>
-        <div class="header__actions">
-          <button class="header__actions-button" title="Поиск" aria-label="Поиск">
-            <svg>
-              <use href="./img/icons/sprite.svg#search"></use>
-            </svg>
-          </button>
-          <button class="header__actions-button" title="Корзина" aria-label="Корзина">
-            <svg>
-              <use href="./img/icons/sprite.svg#cart"></use>
-            </svg>
-          </button>
-          <button class="header__burger burger" title="Корзина" aria-label="Корзина">
-            <svg>
-              <use href="./img/icons/sprite.svg#menu-burger"></use>
-            </svg>
-          </button>
-        </div>
       </div>
     </main>
     <div id="footer"></div>
     <script>
-      async function loadIncludes() {
-        // Загружаем header
-        const headerResp = await fetch("header.html");
-        const headerText = await headerResp.text();
-        const headerDoc = new DOMParser().parseFromString(headerText, "text/html");
-        document.getElementById("header").replaceWith(headerDoc.body.firstChild);
+      fetch("header.html")
+        .then((r) => r.text())
+        .then((h) => {
+          document.getElementById("header").innerHTML = h;
 
-        // Загружаем footer
-        const footerResp = await fetch("footer.html");
-        const footerText = await footerResp.text();
-        const footerDoc = new DOMParser().parseFromString(footerText, "text/html");
-        document.getElementById("footer").replaceWith(footerDoc.body.firstChild);
-      }
+          // Обновляем спрайт
+          const sprite = document.querySelector("use");
+          if (sprite) {
+            const href = sprite.getAttribute("href");
+            sprite.setAttribute("href", "");
+            setTimeout(() => sprite.setAttribute("href", href), 10);
+          }
+        });
 
-      loadIncludes();
+      fetch("footer.html")
+        .then((r) => r.text())
+        .then((f) => (document.getElementById("footer").innerHTML = f));
     </script>
+    <script defer src="./js/index.js" type="module"></script>
   </body>
 </html>
