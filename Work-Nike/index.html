@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/nike-con-favicon.svg" type="image/x-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
-
     <title>Tortik vs Nike</title>
   </head>
 
@@ -21,14 +17,30 @@
     </div>
     <div id="header" class="header header--fixed"></div>
     <main class="main">
-      <div class="container">
-        <div class="remark">
-          Далеко-далеко за словесными, горами в стране гласных и согласных живут рыбные тексты. Он, пустился прямо деревни составитель безорфографичный имени осталось вопроса своих если большой напоивший от всех рот что всемогущая власти подзаголовок на берегу вскоре предупреждал! Своего свою
-          которой вершину? Грустный, дал! Страна, подзаголовок.
-          <p>2:20</p>
+      <section class="hero">
+        <div class="container hero__conrainer">
+          <header class="hero__header">
+            <il class="hero__benefits-list">
+              <ul class="hero__benefits-iatem">
+                стиль
+              </ul>
+              <ul class="hero__benefits-iatem">
+                cкорость
+              </ul>
+            </il>
+            <h1 class="hero__title">Nike <span class="hero__title-accent">air</span> mag</h1>
+          </header>
+          <img src="./img/nike-air-mag-1.png" alt="" class="hero__img" />
+          <footer class="hero__footer">
+            <a href="#" class="hero__details">
+              Подробнее
+              <svg>
+                <use class="hero__details-icon" href="./img/icons/sprite.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </footer>
         </div>
-        <a href="#">Далеко-далеко за словесными</a>
-      </div>
+      </section>
     </main>
     <div id="footer"></div>
     <script>
@@ -50,6 +62,6 @@
         .then((r) => r.text())
         .then((f) => (document.getElementById("footer").innerHTML = f));
     </script>
-    <script defer src="./js/index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

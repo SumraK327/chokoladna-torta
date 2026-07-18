@@ -3,8 +3,8 @@
 }
 .container {
   margin: 0 auto;
-  max-width: 1270px;
-  padding: 0 15px;
+  padding: 0 5px;
+  max-width: 1250px;
 }
 .back {
   padding: 10px 0;
@@ -33,9 +33,117 @@
   line-height: 130%;
   color: var(--link-color);
 }
-/*------------------- /menu -------------------*/
+/*------------------- hero -------------------*/
+.hero__conrainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: clamp(260px, 5.388rem + 54.31vw, 575px);
+  border: 0px solid rgba(150, 101, 240, 0.685);
+}
+.hero__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+@media (max-width: 1000px) {
+  .hero__header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.hero__benefits-list {
+  position: absolute;
+  left: 0;
+}
+@media (max-width: 1260px) {
+  .hero__benefits-list {
+    left: 10px;
+  }
+}
+@media (width < 1000px) {
+  .hero__benefits-list {
+    top: clamp(40px, -2.328rem + 24.14vw, 180px);
+  }
+}
+.hero__benefits-iatem {
+  margin: 5px 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.hero__title {
+  display: flex;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: clamp(40px, 0.628rem + 9.36vw, 128px);
+  gap: clamp(7px, -0.158rem + 2.98vw, 35px);
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.hero__title-accent {
+  color: transparent;
+  -webkit-text-stroke: 3px var(--accent-color);
+}
+@media (max-width: 768px) {
+  .hero__title-accent {
+    -webkit-text-stroke: 1.5px var(--accent-color);
+  }
+}
+.hero__img {
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: -1;
+}
+.hero__footer {
+  text-align: end;
+}
+@media (max-width: 900px) {
+  .hero__footer {
+    text-align: end;
+    transform: translateY(60px);
+  }
+}
+@media (max-width: 800px) {
+  .hero__footer {
+    text-align: end;
+    transform: translateY(100px);
+  }
+}
+@media (max-width: 425px) {
+  .hero__footer {
+    text-align: end;
+    transform: translateY(70px);
+  }
+}
+.hero__details {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.hero__details svg {
+  margin: 0 0 3px 0;
+  width: 24px;
+  height: 24px;
+}
 /*------------------- 1 -------------------*/
-/*------------------- /1 -------------------*/
 /*
 . {
 	margin: 0 0 0 0;
