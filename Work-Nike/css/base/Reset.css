@@ -14,7 +14,7 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  min-height: 200vh;
+  min-height: 300vh;
 }
 .body--no-scroll {
   overflow-y: hidden;
@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all var(--transition-time) ease;
+  /* transition: all var(--transition-time) ease; */
 }
 
 p,
@@ -59,6 +59,7 @@ h6 {
   font-family: var(--font-family);
 }
 .title-h2 {
+  padding: 0 0 40px 0;
   font-family: var(--font-family);
   font-weight: 600;
   /* min-width: 320px, max-width: 900px*/
@@ -66,12 +67,37 @@ h6 {
   text-transform: uppercase;
   color: var(--main-color);
 }
+@media (max-width: 786px) {
+  .title-h2 {
+    padding: 0 0 30px 0;
+  }
+}
 .title-h3 {
+  padding: 0 0 20px 0;
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 18px;
+  /* min-width: 320px, max-width: 768px*/
+  font-size: clamp(20px, 0.714rem + 2.68vw, 32px);
   text-transform: uppercase;
   color: var(--main-color);
+}
+.title-h4 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.title-h4-secondary {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
 }
 /* ===== Медиа ===== */
 img {
@@ -117,6 +143,7 @@ ol {
 button {
   border: none;
   cursor: pointer;
+  background: none;
 }
 .button {
   margin: 5px;
@@ -130,8 +157,7 @@ button {
 }
 
 .button:hover {
-  filter: brightness(1.9);
-  box-shadow: 0 0 20px rgba(113, 38, 252, 0.527);
+  box-shadow: 0 0 20px var(--accent-color);
 }
 
 /* Убираем стандартные стили для кнопок в Firefox */

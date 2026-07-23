@@ -9,7 +9,7 @@
 .back {
   padding: 10px 0;
   text-align: center;
-  border-bottom: 1px solid rgba(150, 101, 240, 0.685);
+  border-bottom: 1px solid var(--accent-color);
 }
 .remark {
   border: 2px solid #fc2727;
@@ -210,6 +210,182 @@
     gap: 20px;
   }
 }
+/*------------------- Sizes -------------------*/
+.sizes__slider-wrapper {
+  margin: 0 0 60px 0;
+  padding: 46px 0 57px 0;
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  box-shadow:
+    0 0 30px 5px var(--accent-glow-color),
+    inset 0 0 30px 5px var(--accent-glow-color);
+  position: relative;
+}
+.sizes__slide-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sizes__slider-button {
+  width: 30px;
+  height: 30px;
+  color: var(--main-color);
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+@media (any-hover: hover) {
+  .sizes__slider-button:hover {
+    color: var(--accent-color);
+  }
+}
+
+.sizes__slider-button--prev {
+  /* min-width: 320px, max-width: 768px*/
+  left: clamp(5px, -1.25rem + 7.81vw, 40px);
+}
+.sizes__slider-button--next {
+  /* min-width: 320px, max-width: 768px*/
+  right: clamp(5px, -1.25rem + 7.81vw, 40px);
+  transform: translateY(-50%) rotate(-180deg);
+}
+.product__discription {
+  padding: 0 0 40px 0;
+}
+.product__title-accent {
+  color: var(--accent-color);
+}
+.product__price {
+  padding: 0 0 40px 0;
+}
+.product__sizes-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.product__sizes {
+  flex: 1 1 50%;
+}
+.product__sizes-button {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--main-color);
+  border-radius: 12px;
+  box-shadow:
+    var(--shadow-glow),
+    inset var(--shadow-glow);
+}
+.product__sizes-button:disabled,
+.product__sizes-button:disabled:hover {
+  color: var(--disabled-color);
+  box-shadow:
+    var(--shadow-disabled-glow),
+    inset var(--shadow-disabled-glow);
+  border: 1px solid var(--disabled-color);
+  cursor: not-allowed;
+}
+.product__sizes-list {
+  margin: 0 0 40px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (any-hover: hover) {
+  .product__sizes-button:hover {
+    box-shadow:
+      var(--shadow-accent-glow),
+      inset var(--shadow-accent-glow);
+    border: 1px solid var(--accent-color);
+  }
+}
+.product__sizes-button--active {
+  color: var(--accent-color);
+  box-shadow:
+    var(--shadow-accent-glow),
+    inset var(--shadow-accent-glow);
+  border: 1px solid var(--accent-color);
+}
+.product__sizes-title {
+  margin: 0 0 20px 0;
+}
+.product__buy-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product__buy-button {
+  padding: 19px 38px;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg-color);
+  background: var(--accent-color);
+}
+.product__buy-button:hover,
+.product__cart-button:hover {
+  box-shadow: 0 0 12px 0 var(--accent-color);
+}
+.product__cart-button {
+  padding: 17px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+.product__sizes-order-link {
+  padding: 0px 0px 5px;
+  border-bottom: 1px solid var(--main-color);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  color: var(--main-color);
+}
+.product__sizes-order-link:hover {
+  border-bottom: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+@media (max-width: 786px) {
+  .sizes__slider-wrapper {
+    margin: 0 0 40px 0;
+    padding: 50px 0 50px 0;
+  }
+  .product__sizes-wrapper {
+    gap: 40px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .sizes__slide-img {
+    width: 100%;
+    max-height: 300px;
+  }
+  .title-h4,
+  .title-h4-secondary {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .sizes__slide-img {
+    width: 100%;
+    max-height: 190px;
+  }
+}
+@media (max-width: 425px) {
+  .product__buy-button {
+    padding: 19px 0;
+    flex: 1;
+  }
+}
+
 /*------------------- 1 -------------------*/
 /*
 . {

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/nike-con-favicon.svg" type="image/x-icon" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <title>Tortik vs Nike</title>
   </head>
 
@@ -30,7 +32,7 @@
             </il>
             <h1 class="hero__title">Nike <span class="hero__title-accent">air</span> mag</h1>
           </header>
-          <img src="./img/nike-air-mag-1.png" alt="" class="hero__img" />
+          <img src="./img/nike-air-mag-1.png" alt="Серый кроссовок Nike Air Mag с белым ремешком с надписью NIKE, белым логотипом и светящейся синей подошвой, парящий над желтой круглой платформой" class="hero__img" />
           <footer class="hero__footer">
             <a href="#" class="hero__details">
               Подробнее
@@ -47,7 +49,7 @@
           <p class="air-mag__description">Это не просто кроссовки — это шаг в будущее. С уникальным дизайном и передовыми технологиями, эти кроссовки вдохновлены легендарной киноделией и готовы сопровождать вас в любых приключениях.</p>
           <div class="air-mag__info-wrapper">
             <picture>
-              <img loading="lazy" src="./img/nike-air-mag-2.png" alt="" />
+              <img loading="lazy" src="./img/nike-air-mag-2.png" alt="Пара серых кроссовок Nike Air Mag со светящейся голубой подошвой, белым логотипом и светящейся надписью NIKE на ремешках, стоящих на белом фоне внутри желтого овала" />
             </picture>
 
             <ul class="air-mag__info-list text-light">
@@ -59,28 +61,84 @@
           </div>
         </div>
       </section>
-      <section class="hero">
-        <div class="container hero__conrainer">
-          <header class="hero__header">
-            <il class="hero__benefits-list">
-              <ul class="hero__benefits-iatem">
-                стиль
-              </ul>
-              <ul class="hero__benefits-iatem">
-                cкорость
-              </ul>
-            </il>
-            <h1 class="hero__title">Nike <span class="hero__title-accent">air</span> mag</h1>
-          </header>
-          <img src="./img/nike-air-mag-1.png" alt="" class="hero__img" />
-          <footer class="hero__footer">
-            <a href="#" class="hero__details">
-              Подробнее
-              <svg>
-                <use class="hero__details-icon" href="./img/icons/sprite.svg#arrow-right"></use>
-              </svg>
-            </a>
-          </footer>
+      <section id="sizes" class="sizes">
+        <div class="container">
+          <h2 class="sizes__title title-h2">Размеры</h2>
+          <section class="product">
+            <div class="sizes__slider-wrapper">
+              <button class="sizes__slider-button sizes__slider-button--prev" aria-label="Предыдущий слайд">
+                <svg width="40" height="40">
+                  <use class="sizes__slider-button-icon" href="./img/icons/sprite.svg#double-arrow"></use>
+                </svg>
+              </button>
+              <div class="swiper sizes__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="sizes__slide-inner">
+                      <picture>
+                        <source srcset="./img/Sizes-slides/Air-mag-slide-1.webp" />
+                        <img class="sizes__slide-img" src="./img/Sizes-slides/Air-mag-slide-1.png" alt="Кроссовок Nike Air Mag серого цвета с белым логотипом и светящимися синими и желтыми элементами" />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sizes__slide-inner">
+                      <picture>
+                        <source srcset="./img/Sizes-slides/Air-mag-slide-2.webp" />
+                        <img class="sizes__slide-img" src="./img/Sizes-slides/Air-mag-slide-2.png" alt="Вид сзади на пару серых кроссовок Nike Air Mag с подсветкой на пятке, светящейся надписью NIKE MAG и цветными светодиодами на боковом блоке" />
+                      </picture>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sizes__slide-inner">
+                      <picture>
+                        <source srcset="./img/Sizes-slides/Air-mag-slide-3.webp" />
+                        <img class="sizes__slide-img" src="./img/Sizes-slides/Air-mag-slide-3.png" alt="Пара серых кроссовок Nike Air Mag, вид сверху, со светящейся голубой подошвой, светящейся надписью NIKE на ремешках и цветными светодиодами на пятке" />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="sizes__slider-button sizes__slider-button--next" aria-label="Следующий слайд">
+                <svg width="40" height="40">
+                  <use class="sizes__slider-button-icon" href="./img/icons/sprite.svg#double-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <h3 class="product__title title-h3">Кроссовки <strong class="product__title-accent">Nike Air Mag</strong> Back To Future</h3>
+            <p class="product__discription">Nike Air Mag — это кусочек киноистории и технологического прогресса. Если вы ищете уникальную пару кроссовок, которая станет не только стильным аксессуаром, но и ценным дополнением вашей коллекции, Nike Air Mag — идеальный выбор.</p>
+            <p class="product__price title-h3">36 490 ₽</p>
+            <div class="product__sizes-wrapper">
+              <section class="product__sizes">
+                <h4 class="product__sizes-title title-h4">Размеры в наличии</h4>
+                <div class="product__sizes-list" data-sizes="list">
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" data-sizes="button">38</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" data-sizes="button">40</button>
+                  <button class="product__sizes-button product__sizes-button--active title-h4" aria-label="Выбрать размер" data-sizes="button">41</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" data-sizes="button">42</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" data-sizes="button">44</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" data-sizes="button">45</button>
+                </div>
+                <div class="product__buy-wrapper">
+                  <button class="product__buy-button">Купить в 1 клик</button>
+                  <button class="product__cart-button" aria-label="Добавить в корзинку" title="Добавить в корзиночку">
+                    <img src="./img/icons/cart-icon.svg" width="23" height="23" loading="lazy" alt="Корзина" />
+                  </button>
+                </div>
+              </section>
+              <section class="product__sizes">
+                <h4 class="product__sizes-title title-h4-secondary">Размеры под заказ</h4>
+                <div class="product__sizes-list">
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" disabled>36</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" disabled>37</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" disabled>43</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" disabled>46</button>
+                  <button class="product__sizes-button title-h4" aria-label="Выбрать размер" disabled>47</button>
+                </div>
+                <a href="" class="product__sizes-order-link">Заказать размер</a>
+              </section>
+            </div>
+          </section>
         </div>
       </section>
     </main>
@@ -104,6 +162,7 @@
         .then((r) => r.text())
         .then((f) => (document.getElementById("footer").innerHTML = f));
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>
