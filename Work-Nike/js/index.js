@@ -28,6 +28,7 @@ try {
     headerFixed,
   );
 
+  sizesSlider();
   sizes();
 } catch (error) {
   console.error(error);
