@@ -1,153 +1,150 @@
 export default class BurgerMenu {
-	constructor(config, headerFixedInstance = null) {
-		this.config = config;
-		this.burgerButton = document.querySelector(`.${this.config.BURGER}`);
-		this.burgerMenu = document.querySelector(`.${this.config.HEADER_MENU}`);
-		this.body = document.querySelector(`.${this.config.PAGE_BODY}`);
-		this.headerFixedInstance = headerFixedInstance;
-		this.main = document.querySelector(`.${this.config.MAIN}`);
+  constructor(config, headerFixedInstance = null) {
+    this.config = config;
+    this.burgerButton = document.querySelector(`.${this.config.BURGER}`);
+    this.burgerMenu = document.querySelector(`.${this.config.HEADER_MENU}`);
+    this.body = document.querySelector(`.${this.config.PAGE_BODY}`);
+    this.headerFixedInstance = headerFixedInstance;
+    this.main = document.querySelector(`.${this.config.MAIN}`);
 
-		if (!this.burgerButton || !this.burgerMenu || !this.body) {
-			throw new Error('Required DOM elements are missing.');
-		}
+    console.log("BurgerMenu v1.3 | constructor");
 
-		this.isMobileView = window.innerWidth <= this.config.BREAKPOINT;
+    if (!this.burgerButton || !this.burgerMenu || !this.body) {
+      throw new Error("Required DOM elements are missing.");
+    }
 
-		this.onBurgerClick = this.onBurgerClick.bind(this);
-		this.onBodyClick = this.onBodyClick.bind(this);
-		this.handleTouchStart = this.handleTouchStart.bind(this);
-		this.handleTouchMove = this.handleTouchMove.bind(this);
-		this.handleTouchEnd = this.handleTouchEnd.bind(this);
-		this.onWindowResize = this.onWindowResize.bind(this);
+    this.mediaQuery = window.matchMedia(`(max-width: ${this.config.BREAKPOINT}px)`);
+    this.isMobileView = this.mediaQuery.matches;
 
-		this.manageEvents();
-		window.addEventListener('resize', this.onWindowResize);
-	}
+    this.onBurgerClick = this.onBurgerClick.bind(this);
+    this.onBodyClick = this.onBodyClick.bind(this);
+    this.handleTouchStart = this.handleTouchStart.bind(this);
+    this.handleTouchMove = this.handleTouchMove.bind(this);
+    this.handleTouchEnd = this.handleTouchEnd.bind(this);
+    this.onMediaChange = this.onMediaChange.bind(this);
 
-	manageEvents() {
-		if (this.isMobileView) {
-			this.initEvents();
-		} else {
-			this.removeEvents();
-			this.hideBurgerMenu();
-		}
-	}
+    this.manageEvents();
+    this.mediaQuery.addEventListener("change", this.onMediaChange);
+  }
 
-	initEvents() {
-		// Click events
-		this.burgerButton.addEventListener('click', this.onBurgerClick);
-		this.body.addEventListener('click', this.onBodyClick);
+  onMediaChange(event) {
+    const isNowMobileView = event.matches;
 
-		// Touch events
-		this.body.addEventListener('touchstart', this.handleTouchStart);
-		this.body.addEventListener('touchmove', this.handleTouchMove);
-		this.body.addEventListener('touchend', this.handleTouchEnd);
-	}
+    console.log(`BurgerMenu: media change → ${window.innerWidth}px, mobile: ${isNowMobileView}`);
 
-	removeEvents() {
-		// Click events
-		this.burgerButton.removeEventListener('click', this.onBurgerClick);
-		this.body.removeEventListener('click', this.onBodyClick);
+    if (this.isMobileView !== isNowMobileView) {
+      this.isMobileView = isNowMobileView;
 
-		// Touch events
-		this.body.removeEventListener('touchstart', this.handleTouchStart);
-		this.body.removeEventListener('touchmove', this.handleTouchMove);
-		this.body.removeEventListener('touchend', this.handleTouchEnd);
-	}
+      setTimeout(() => {
+        this.manageEvents();
+      }, 50);
+    }
+  }
 
-	onWindowResize() {
-		const isNowMobileView = window.innerWidth <= this.config.BREAKPOINT;
+  manageEvents() {
+    if (this.isMobileView) {
+      console.log("BurgerMenu: мобильный вид, вешаю события");
+      this.initEvents();
+    } else {
+      console.log("BurgerMenu: десктоп, убираю события");
+      this.removeEvents();
+      this.hideBurgerMenu();
+    }
+  }
 
-		if (this.isMobileView !== isNowMobileView) {
-			this.isMobileView = isNowMobileView;
-			this.manageEvents();
-		}
-	}
+  initEvents() {
+    this.burgerButton.addEventListener("click", this.onBurgerClick);
+    this.body.addEventListener("click", this.onBodyClick);
 
-	// Click events
-	onBurgerClick() {
-		const isOpen = this.burgerButton.classList.toggle(this.config.BURGER_OPEN);
-		this.burgerButton.ariaLabel = isOpen
-			? this.config.lABEL.CLOSE
-			: this.config.lABEL.OPEN;
-		this.burgerButton.ariaExpanded = isOpen;
-		this.burgerMenu.classList.toggle(this.config.HEADER_MENU_OPEN, isOpen);
-		this.body.classList.toggle(this.config.PAGE_BODY_NO_SCROLL, isOpen);
+    this.body.addEventListener("touchstart", this.handleTouchStart);
+    this.body.addEventListener("touchmove", this.handleTouchMove);
+    this.body.addEventListener("touchend", this.handleTouchEnd);
+  }
 
-		if (this.main) {
-			this.main.style.pointerEvents = isOpen ? 'none' : '';
-		}
+  removeEvents() {
+    this.burgerButton.removeEventListener("click", this.onBurgerClick);
+    this.body.removeEventListener("click", this.onBodyClick);
 
-		if (this.headerFixedInstance) {
-			if (isOpen) {
-				this.headerFixedInstance.removeFixedClass();
-			} else {
-				this.headerFixedInstance.updateFixedClass();
-			}
-		}
-	}
+    this.body.removeEventListener("touchstart", this.handleTouchStart);
+    this.body.removeEventListener("touchmove", this.handleTouchMove);
+    this.body.removeEventListener("touchend", this.handleTouchEnd);
+  }
 
-	hideBurgerMenu() {
-		const wasOpen = this.isBurgerMenuOpen();
-		this.burgerButton.classList.remove(this.config.BURGER_OPEN);
-		this.burgerButton.ariaLabel = this.config.lABEL.OPEN;
-		this.burgerButton.ariaExpanded = false;
-		this.burgerMenu.classList.remove(this.config.HEADER_MENU_OPEN);
-		this.body.classList.remove(this.config.PAGE_BODY_NO_SCROLL);
+  onBurgerClick() {
+    const isOpen = this.burgerButton.classList.toggle(this.config.BURGER_OPEN);
+    this.burgerButton.ariaLabel = isOpen ? this.config.lABEL.CLOSE : this.config.lABEL.OPEN;
+    this.burgerButton.ariaExpanded = isOpen;
+    this.burgerMenu.classList.toggle(this.config.HEADER_MENU_OPEN, isOpen);
+    this.body.classList.toggle(this.config.PAGE_BODY_NO_SCROLL, isOpen);
 
-		if (this.main) {
-			this.main.style.pointerEvents = '';
-		}
+    if (this.main) {
+      this.main.style.pointerEvents = isOpen ? "none" : "";
+    }
 
-		if (wasOpen && this.headerFixedInstance) {
-			this.headerFixedInstance.updateFixedClass();
-		}
-	}
+    if (this.headerFixedInstance) {
+      if (isOpen) {
+        this.headerFixedInstance.removeFixedClass();
+      } else {
+        this.headerFixedInstance.updateFixedClass();
+      }
+    }
+  }
 
-	isBurgerMenuOpen() {
-		return this.burgerMenu.classList.contains(this.config.HEADER_MENU_OPEN);
-	}
+  hideBurgerMenu() {
+    const wasOpen = this.isBurgerMenuOpen();
+    this.burgerButton.classList.remove(this.config.BURGER_OPEN);
+    this.burgerButton.ariaLabel = this.config.lABEL.OPEN;
+    this.burgerButton.ariaExpanded = false;
+    this.burgerMenu.classList.remove(this.config.HEADER_MENU_OPEN);
+    this.body.classList.remove(this.config.PAGE_BODY_NO_SCROLL);
 
-	onBodyClick(event) {
-		const target = event.target;
-		const isLinkInMenu = target.classList.contains(this.config.MENU_LINK);
-		const isMenuOpen = this.isBurgerMenuOpen();
-		const isClickOutsideMenu =
-			!target.closest(`.${this.config.HEADER_MENU}`) &&
-			!target.closest(`.${this.config.BURGER}`);
+    if (this.main) {
+      this.main.style.pointerEvents = "";
+    }
 
-		if (
-			(isLinkInMenu && window.innerWidth <= this.config.BREAKPOINT) ||
-			(isMenuOpen && isClickOutsideMenu)
-		) {
-			this.hideBurgerMenu();
-		}
-	}
+    if (wasOpen && this.headerFixedInstance) {
+      this.headerFixedInstance.updateFixedClass();
+    }
+  }
 
-	// Touch events
-	handleTouchStart(event) {
-		if (!this.isBurgerMenuOpen()) return;
-		this.touchStartX = event.changedTouches[0].screenX;
-		this.burgerMenu.style.transition = 'none';
-	}
+  isBurgerMenuOpen() {
+    return this.burgerMenu.classList.contains(this.config.HEADER_MENU_OPEN);
+  }
 
-	handleTouchMove(event) {
-		if (!this.isBurgerMenuOpen()) return;
-		const currentX = event.changedTouches[0].screenX;
-		const translateX = Math.max(0, currentX - this.touchStartX);
-		this.burgerMenu.style.right = `-${translateX}px`;
-	}
+  onBodyClick(event) {
+    const target = event.target;
+    const isLinkInMenu = target.classList.contains(this.config.MENU_LINK);
+    const isMenuOpen = this.isBurgerMenuOpen();
+    const isClickOutsideMenu = !target.closest(`.${this.config.HEADER_MENU}`) && !target.closest(`.${this.config.BURGER}`);
 
-	handleTouchEnd(event) {
-		if (!this.isBurgerMenuOpen()) return;
-		const touchEndX = event.changedTouches[0].screenX;
-		const swipeDistance = touchEndX - this.touchStartX;
+    if ((isLinkInMenu && this.isMobileView) || (isMenuOpen && isClickOutsideMenu)) {
+      this.hideBurgerMenu();
+    }
+  }
 
-		this.burgerMenu.style.transition = '';
-		this.burgerMenu.style.right = '';
+  handleTouchStart(event) {
+    if (!this.isBurgerMenuOpen()) return;
+    this.touchStartX = event.changedTouches[0].screenX;
+    this.burgerMenu.style.transition = "none";
+  }
 
-		if (swipeDistance > 70) {
-			this.hideBurgerMenu();
-		}
-	}
+  handleTouchMove(event) {
+    if (!this.isBurgerMenuOpen()) return;
+    const currentX = event.changedTouches[0].screenX;
+    const translateX = Math.max(0, currentX - this.touchStartX);
+    this.burgerMenu.style.right = `-${translateX}px`;
+  }
+
+  handleTouchEnd(event) {
+    if (!this.isBurgerMenuOpen()) return;
+    const touchEndX = event.changedTouches[0].screenX;
+    const swipeDistance = touchEndX - this.touchStartX;
+
+    this.burgerMenu.style.transition = "";
+    this.burgerMenu.style.right = "";
+
+    if (swipeDistance > 70) {
+      this.hideBurgerMenu();
+    }
+  }
 }

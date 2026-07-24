@@ -3,51 +3,74 @@ import BurgerMenu from "./burger.js";
 import { sizesSlider } from "./sizes-slider.js";
 import { sizes } from "./sizes.js";
 
+console.log("v1 | BurgerMenu loader | 2026-07-24");
+
+let burgerMenuInstance = null;
+
 function initBurgerMenu() {
+  if (burgerMenuInstance) return;
+
+  const burgerEl = document.querySelector(".burger");
+  if (!burgerEl) return;
+
+  console.log("BurgerMenu: инициализация...");
+
   const headerFixed = new HeaderFixed({
     HEADER: "header",
     HEADER_FIXED: "header--fixed",
   });
 
-  try {
-    new BurgerMenu(
-      {
-        BURGER: "burger",
-        BURGER_OPEN: "burger--open",
-        HEADER_MENU: "header__menu",
-        HEADER_MENU_OPEN: "header__menu--open",
-        lABEL: {
-          OPEN: "Открыть меню",
-          CLOSE: "Закрыть меню",
-        },
-        PAGE_BODY: "body",
-        PAGE_BODY_NO_SCROLL: "body--no-scroll",
-        MENU_LINK: "menu__link",
-        BREAKPOINT: 768,
-        MAIN: "main",
+  burgerMenuInstance = new BurgerMenu(
+    {
+      BURGER: "burger",
+      BURGER_OPEN: "burger--open",
+      HEADER_MENU: "header__menu",
+      HEADER_MENU_OPEN: "header__menu--open",
+      lABEL: {
+        OPEN: "Открыть меню",
+        CLOSE: "Закрыть меню",
       },
-      headerFixed,
-    );
-  } catch (error) {
-    console.warn("BurgerMenu: DOM-элементы ещё не загружены.");
-  }
+      PAGE_BODY: "body",
+      PAGE_BODY_NO_SCROLL: "body--no-scroll",
+      MENU_LINK: "menu__link",
+      BREAKPOINT: 768,
+      MAIN: "main",
+    },
+    headerFixed,
+  );
+
+  console.log("BurgerMenu: готов");
 }
 
-// Ждём загрузку хедера
 const headerEl = document.getElementById("header");
-if (headerEl && headerEl.innerHTML.trim()) {
-  // Хедер уже загружен
-  initBurgerMenu();
-} else {
-  // Ждём fetch
+
+function tryInit() {
+  if (document.querySelector(".burger")) {
+    initBurgerMenu();
+    return true;
+  }
+  return false;
+}
+
+if (!tryInit()) {
+  console.log("BurgerMenu: жду загрузки хедера...");
   const observer = new MutationObserver(() => {
-    if (document.querySelector(".burger")) {
-      initBurgerMenu();
+    if (tryInit()) {
+      console.log("BurgerMenu: хедер загружен, запускаю");
       observer.disconnect();
     }
   });
-  observer.observe(headerEl, { childList: true, subtree: true });
+  if (headerEl) {
+    observer.observe(headerEl, { childList: true, subtree: true });
+  }
 }
+
+setTimeout(() => {
+  if (!burgerMenuInstance) {
+    console.log("BurgerMenu: резервный запуск...");
+    tryInit();
+  }
+}, 500);
 
 sizesSlider();
 sizes();
