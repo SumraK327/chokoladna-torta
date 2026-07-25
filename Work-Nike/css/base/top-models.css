@@ -1,0 +1,44 @@
+/* Стили для всплывающего окна fslightbox */
+.modal-content {
+  max-width: 500px;
+  padding: 30px;
+  background: #ffffff;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.modal-content strong {
+  font-weight: 600;
+  color: #555;
+}
+
+.close-modal-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.close-modal-btn:hover {
+  background: #000;
+}

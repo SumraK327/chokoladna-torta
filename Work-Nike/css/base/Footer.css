@@ -2,6 +2,6 @@
   margin-top: auto;
 }
 .footer {
-  border: 0px solid rgba(150, 101, 240, 0.685);
+  border: 1px solid var(--accent-color);
   min-height: 220px;
 }

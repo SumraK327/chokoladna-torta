@@ -7,8 +7,6 @@ export default class BurgerMenu {
     this.headerFixedInstance = headerFixedInstance;
     this.main = document.querySelector(`.${this.config.MAIN}`);
 
-    console.log("BurgerMenu v1.3 | constructor");
-
     if (!this.burgerButton || !this.burgerMenu || !this.body) {
       throw new Error("Required DOM elements are missing.");
     }
@@ -30,8 +28,6 @@ export default class BurgerMenu {
   onMediaChange(event) {
     const isNowMobileView = event.matches;
 
-    console.log(`BurgerMenu: media change → ${window.innerWidth}px, mobile: ${isNowMobileView}`);
-
     if (this.isMobileView !== isNowMobileView) {
       this.isMobileView = isNowMobileView;
 
@@ -43,10 +39,8 @@ export default class BurgerMenu {
 
   manageEvents() {
     if (this.isMobileView) {
-      console.log("BurgerMenu: мобильный вид, вешаю события");
       this.initEvents();
     } else {
-      console.log("BurgerMenu: десктоп, убираю события");
       this.removeEvents();
       this.hideBurgerMenu();
     }

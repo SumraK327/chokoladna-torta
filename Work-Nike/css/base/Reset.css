@@ -14,7 +14,7 @@
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  min-height: 300vh;
+  min-height: 400vh;
 }
 .body--no-scroll {
   overflow-y: hidden;
@@ -87,6 +87,13 @@ h6 {
   font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+.title2-h4 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
   text-transform: uppercase;
   color: var(--main-color);
 }
