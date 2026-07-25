@@ -229,8 +229,8 @@
         <div class="container">
           <h2 class="top-models__title title-h2">Другие <span class="top-models__titel-accent">Топ</span> модели от Nike</h2>
           <div class="top-models__products">
-            <article class="top-models__product">
-              <a class="top-models__ptoduct-link" href="top-models.html #desc-1" data-fslightbox="product-gallery">
+            <article class="top-models__product" onclick="openPopup('product1-popup')" style="cursor: pointer">
+              <div class="top-models__ptoduct-link">
                 <div class="top-models__product-content">
                   <h4 class="top-models__product-title title2-h4">Nike Air Yeezy 2 "Red October"</h4>
                   <svg class="top-models__product-icon">
@@ -239,14 +239,14 @@
                 </div>
                 <picture class="top-models__ptoduct-img">
                   <source srcset="./img/top-models/model-1.webp" type="image/webp" />
-                  <img src="./img/top-models/model-1.png" alt="Красный высокий кроссовок Nike Air Yeezy 2 Red October с сетчатой текстурой, красным ремешком и металлическими люверсами" />
+                  <img src="./img/top-models/model-1.png" alt="..." />
                 </picture>
-              </a>
+              </div>
             </article>
-            <article class="top-models__product">
-              <a href="##" class="top-models__ptoduct-link">
+            <article class="top-models__product" onclick="openPopup('product2-popup')" style="cursor: pointer">
+              <div class="top-models__ptoduct-link">
                 <div class="top-models__product-content">
-                  <h4 class="top-models__product-title title2-h4">Wings x Air Jordan 1"</h4>
+                  <h4 class="top-models__product-title title2-h4">Wings x Air Jordan 1</h4>
                   <svg class="top-models__product-icon">
                     <use href="./img/icons/sprite.svg#double-arrow"></use>
                   </svg>
@@ -255,12 +255,12 @@
                   <source srcset="./img/top-models/model-2.webp" type="image/webp" />
                   <img src="./img/top-models/model-2.png" alt="Пара красных, белых и черных высоких кроссовок Air Jordan 1 с принтом в виде графического рисунка и звезд на боковой панели" />
                 </picture>
-              </a>
+              </div>
             </article>
-            <article class="top-models__product">
-              <a href="##" class="top-models__ptoduct-link">
+            <article class="top-models__product" onclick="openPopup('product3-popup')" style="cursor: pointer">
+              <div class="top-models__ptoduct-link">
                 <div class="top-models__product-content">
-                  <h4 class="top-models__product-title title2-h4">Nike Dunk SB Low Yellow Lobster"</h4>
+                  <h4 class="top-models__product-title title2-h4">Nike Dunk SB Low Yellow Lobster</h4>
                   <svg class="top-models__product-icon">
                     <use href="./img/icons/sprite.svg#double-arrow"></use>
                   </svg>
@@ -269,7 +269,7 @@
                   <source srcset="./img/top-models/model-3.webp" type="image/webp" />
                   <img src="./img/top-models/model-3.png" alt="Желтый кроссовок Nike Dunk Low с замшевым верхом в темную крапинку, коричневым логотипом и коричневой подошвой, вид сбоку" />
                 </picture>
-              </a>
+              </div>
             </article>
             <article class="top-models__product">
               <a href="##" class="top-models__ptoduct-link">
@@ -383,5 +383,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/fslightbox.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
+    <script>
+      fetch("top-models.html")
+        .then((r) => r.text())
+        .then((h) => (document.getElementById("top-models-popups").innerHTML = h));
+    </script>
+    <div id="top-models-popups"></div>
   </body>
 </html>

@@ -75,37 +75,12 @@ setTimeout(() => {
 sizesSlider();
 sizes();
 
-/* ==========================================================
-   ЛОГИКА ДЛЯ fslightbox (AJAX-ЗАГРУЗКА ОПИСАНИЙ)
-   ========================================================== */
+window.openPopup = function (id) {
+  document.getElementById(id).classList.add("open");
+  document.body.classList.add("body--no-scroll");
+};
 
-function initFsLightbox() {
-  console.log("fslightbox: инициализация...");
-
-  // Берем класс прямо из глобального объекта window
-  const lightbox = new window.FsLightbox();
-  const links = document.querySelectorAll('[data-fslightbox="product-gallery"]');
-
-  if (links.length === 0) {
-    console.log("fslightbox: ссылки не найдены");
-    return;
-  }
-
-  links.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const href = this.getAttribute("href");
-      if (!href) return;
-
-      lightbox.open({
-        type: "ajax",
-        source: href,
-      });
-    });
-  });
-
-  console.log(`fslightbox: готов (${links.length} ссылок)`);
-}
-
-// Запускаем инициализацию
-initFsLightbox();
+window.closePopup = function (id) {
+  document.getElementById(id).classList.remove("open");
+  document.body.classList.remove("body--no-scroll");
+};
