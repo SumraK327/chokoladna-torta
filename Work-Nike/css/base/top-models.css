@@ -53,6 +53,7 @@
 }
 .popup__body-title {
   margin: 0 0 15px 0;
+  padding: 0 20px 0 0;
   border-bottom: 1px solid var(--accent-color);
 }
 .popup__body-title-h5 {
@@ -81,5 +82,8 @@
 @media (max-width: 375px) {
   .popup__body {
     padding: 10px;
+  }
+  .popup__close {
+    top: 5px;
   }
 }
