@@ -434,7 +434,7 @@
 }
 .characteristics__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px 20px;
 }
 .characteristics__cart-icon {
@@ -478,7 +478,7 @@
 }
 .top-models__products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 20px;
   justify-content: center;
 }
