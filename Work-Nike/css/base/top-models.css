@@ -73,6 +73,10 @@
   font-size: 24px;
   cursor: pointer;
 }
+.popup__body {
+  max-height: 90vh;
+  overflow-y: auto;
+}
 
 @media (max-width: 375px) {
   .popup__body {

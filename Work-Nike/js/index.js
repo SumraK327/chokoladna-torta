@@ -84,3 +84,13 @@ window.closePopup = function (id) {
   document.getElementById(id).classList.remove("open");
   document.body.classList.remove("body--no-scroll");
 };
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("popup__overlay")) {
+    const popup = e.target.closest(".popup");
+    if (popup) {
+      popup.classList.remove("open");
+      document.body.classList.remove("body--no-scroll");
+    }
+  }
+});
