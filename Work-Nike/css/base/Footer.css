@@ -2,6 +2,35 @@
   margin-top: auto;
 }
 .footer {
-  border: 1px solid var(--accent-color);
-  min-height: 220px;
+  border-top: 1px solid var(--main-color);
+}
+.container-footer {
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .container-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-footer .menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container-footer > * {
+    margin: 0 0 30px 0;
+  }
 }

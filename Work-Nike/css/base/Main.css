@@ -464,15 +464,7 @@
     height: 32px;
   }
 }
-/*----------------- top-models -----------------*/
-.top-models {
-}
-.container {
-}
-.top-models__title {
-}
-.title-h2 {
-}
+/*----------- top-models -----------*/
 .top-models__titel-accent {
   color: var(--accent-color);
 }
@@ -481,8 +473,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 20px;
   justify-content: center;
-}
-.top-models__product {
 }
 .top-models__ptoduct-link {
   padding: 30px;
@@ -561,6 +551,41 @@
     font-size: 15px;
   }
 }
+/*---------------- Modal ----------------*/
+.modal {
+  position: fixed;
+  z-index: 101;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* .modal__window {
+}
+.modal-buy {
+}
+.modal__close {
+}
+.burger__icon-cross {
+}
+.modal__content {
+}
+.modal-buy__title {
+}
+.title-h3 {
+}
+.modal-buy__form {
+}
+.modal-buy__label {
+}
+.modal-buy__input {
+}
+.modal-buy__submit {
+} */
 /*------------------- 1 -------------------*/
 /*
 . {

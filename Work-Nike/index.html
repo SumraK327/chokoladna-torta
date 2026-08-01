@@ -361,6 +361,30 @@
     </main>
 
     <div id="footer"></div>
+    <div class="modal">
+      <div class="modal__window modal-buy">
+        <button class="modal__close" aria-label="Закрыть">
+          <svg>
+            <use class="burger__icon-cross" href="./img/icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <h3 class="modal-buy__title title-h3">Заявка на заказ</h3>
+          <form class="modal-buy__form">
+            <label class="modal-buy__label">
+              <input class="modal-buy__input" placeholder="Ваше имя" required name="Name" type="text" />
+            </label>
+            <label class="modal-buy__label">
+              <input class="modal-buy__input" placeholder="Ваш телефон" required name="Phone" type="tel" />
+            </label>
+            <label class="modal-buy__label">
+              <input class="modal-buy__input" placeholder="Ваш email" required name="Email" type="email" />
+            </label>
+            <button class="modal-buy__submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script>
       fetch("header.html")
         .then((r) => r.text())
@@ -388,6 +412,6 @@
         .then((r) => r.text())
         .then((h) => (document.getElementById("top-models-popups").innerHTML = h));
     </script>
-    <div id="top-models-popups"></div>
+    <!-- <div id="top-models-popups"></div> -->
   </body>
 </html>

@@ -79,6 +79,9 @@
   max-height: 90vh;
   overflow-y: auto;
 }
+body.body--no-scroll {
+  overflow: hidden !important;
+}
 
 @media (max-width: 375px) {
   .popup__body {
