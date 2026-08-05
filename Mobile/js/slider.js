@@ -18,6 +18,7 @@ export const Slider = () => {
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
 
     mousewheel: {
