@@ -18,6 +18,9 @@
 
   --heading-color: #000;
 
+  /* shadows */
+  --shadow-color: #181817;
+
   /* transitions */
   --transition-time: 0.5s;
 }

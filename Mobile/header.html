@@ -3,34 +3,39 @@
     <a href="##" class="header__logo">
       <img src="./img/icons/logo.svg" alt="" class="header__img" />
     </a>
-    <nav class="menu">
-      <ul class="menu__list">
+    <nav class="menu header__menu" id="header__menu" aria-label="Основное меню">
+      <ul class="menu__list" role="list">
         <li class="menu__item">
-          <a href="##" class="menu__link">Все продукты</a>
+          <a href="##" class="menu__link link-after">Все продукты</a>
+        </li>
+        <li class="menu__item menu__link--dropdown">
+          <a href="##" class="menu__link link-after">Решения</a>
         </li>
         <li class="menu__item">
-          <a href="##" class="menu__link menu__link--dropdown">Решения</a>
+          <a href="##" class="menu__link link-after">О нас</a>
         </li>
         <li class="menu__item">
-          <a href="##" class="menu__link">О нас </a>
-        </li>
-        <li class="menu__item">
-          <a href="##" class="menu__link">Поддержка</a>
-        </li>
-        <li class="menu__item">
-          <a href="##" class="menu__link accent">Header Еще не доделал</a>
+          <a href="##" class="menu__link link-after">Поддержка</a>
         </li>
       </ul>
     </nav>
     <div class="controls">
-      <button class="controls__search" title="Корзина" aria-label="Корзина">
+      <button class="controls__search" title="Поиск" aria-label="Поиск">
         <svg width="24" height="24">
           <use class="header__actions-icon" href="./img/icons/sprite.svg#search"></use>
         </svg>
       </button>
-      <button class="controls__basket" title="Поиск" aria-label="Поиск">
+
+      <button class="controls__basket" title="Корзина" aria-label="Корзина">
         <svg width="24" height="24">
           <use class="header__actions-icon" href="./img/icons/sprite.svg#basket"></use>
+        </svg>
+      </button>
+
+      <button class="controls__burger burger" title="Открыть меню" aria-label="Открыть меню" aria-expanded="false" aria-controls="header__menu">
+        <svg width="27" height="27">
+          <use class="header__actions-icon burger__icon" href="./img/icons/sprite.svg#menu-burger"></use>
+          <use class="header__actions-icon burger__icon-cross" href="./img/icons/sprite.svg#cross"></use>
         </svg>
       </button>
     </div>
