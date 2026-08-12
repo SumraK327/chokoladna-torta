@@ -33,8 +33,6 @@
   display: flex;
   align-items: center;
 }
-.menu__link {
-}
 .menu__link--dropdown {
   display: flex;
   gap: 4px;
@@ -122,5 +120,71 @@
 @media (max-width: 425px) {
   .header__logo {
     width: 130px;
+  }
+}
+
+/* ===== Выпадающее меню «Решения» ===== */
+
+.menu__link--dropdown {
+  position: relative;
+}
+.menu__link--dropdown::after {
+  transition: transform var(--transition-time) ease;
+}
+.menu__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 12px 0;
+  background: var(--bg-color);
+  box-shadow: 0 15px 30px -15px var(--shadow-color);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition-time) ease,
+    visibility var(--transition-time) ease;
+}
+.menu__link--dropdown:hover .menu__submenu,
+.menu__link--dropdown:focus-within .menu__submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* стрелка переворачивается, пока меню открыто */
+.menu__link--dropdown:hover::after,
+.menu__link--dropdown:focus-within::after {
+  transform: rotate(180deg);
+}
+.menu__sublink {
+  display: inline-block;
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+@media (any-hover: hover) {
+  .menu__sublink:hover {
+    opacity: 0.5;
+  }
+}
+/* на мобильных подменю всегда видно прямо в бургер-панели */
+@media (max-width: 768px) {
+  .menu__link--dropdown {
+    padding-block: 5px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-block: 1px solid #000000;
+  }
+  .menu__link--dropdown::after {
+    display: none;
+  }
+  .menu__submenu {
+    position: static;
+    min-width: 0;
+    padding: 10px 15px 0 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
   }
 }

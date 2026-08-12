@@ -155,6 +155,103 @@
   }
 }
 
+/*-------------- offers --------------*/
+.offers {
+  padding: 0 0 30px 0;
+  border: 3px solid rgb(4, 255, 0);
+}
+.offers__title {
+  margin: 0 0 10px 0;
+}
+.offers__text {
+  margin: 0 auto 55px auto;
+  max-width: 830px;
+}
+.offers__container {
+  display: flex;
+  gap: 16px;
+}
+.offers__box-left {
+  width: 50%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.offers__laptops {
+  margin: 0 0 30px 0;
+  padding: 0px 42px 10px 10px;
+  box-shadow: var(--box-shadow);
+}
+.offers__laptops-img {
+  max-width: 90%;
+}
+.offers__laptops-title {
+  margin: 10px 0 0 0;
+}
+.title-h4 {
+}
+.offers__laptops-description {
+}
+.offers__accessories {
+  padding: 10px 42px 10px 42px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  transform: translateY(25px);
+}
+.offers__accessories-img {
+  max-width: 380px;
+}
+.offers__accessories-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.offers__accessories-title {
+}
+.offers__accessories-description {
+}
+.offers__box-right {
+  width: 50%;
+  display: flex;
+  gap: 16px;
+}
+.offers__box-right > article {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.offers__phones {
+  box-shadow: var(--box-shadow);
+  width: 50%;
+}
+.offers__phones-img {
+  padding: 0 0 40px 0;
+}
+.offers__phones-title {
+  text-align: center;
+}
+.offers__phones-description {
+  text-align: center;
+}
+.offers__tablets {
+  box-shadow: var(--box-shadow);
+  width: 50%;
+}
+.offers__tablets-img {
+  padding: 40px 0 0 0;
+}
+.offers__tablets-title {
+  text-align: center;
+}
+.offers__tablets-description {
+  text-align: center;
+}
+
+.delete img {
+  width: 100%;
+}
+
 /*-------------- 1 --------------*/
 /*
 . {
