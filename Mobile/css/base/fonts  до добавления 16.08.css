@@ -3,7 +3,7 @@
   src:
     local("ReadexPro Regular"),
     local("ReadexPro-Regular"),
-    url("../../fonts/ReadexPro/ReadexPro-Regular.woff2") format("woff2");
+    url("../../fonts/ReadexPro-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,41 +14,8 @@
   src:
     local("Inter Regular"),
     local("Inter-Regular"),
-    url("../../fonts/Inter/Inter-Regular.woff2") format("woff2");
+    url("../../fonts/Inter-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Inter;
-  src:
-    local("Inter SemiBold"),
-    local("Inter-SemiBold"),
-    url("../../fonts/Inter/Inter-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Inter;
-  src:
-    local("Inter Medium"),
-    local("Inter-Medium"),
-    url("../../fonts/Inter/Inter-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Inter;
-  src:
-    local("Inter Bold"),
-    local("Inter-Bold"),
-    url("../../fonts/Inter/Inter-Bold.woff2") format("woff2");
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -58,7 +25,7 @@
   src:
     local("Onest Regular"),
     local("Onest-Regular"),
-    url("../../fonts/Onest/Onest-Regular.woff2") format("woff2");
+    url("../../fonts/Onest-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -69,7 +36,7 @@
   src:
     local("Onest Light"),
     local("Onest-Light"),
-    url("../../fonts/Onest/OnestLight1602-hint.woff") format("woff");
+    url("../../fonts/OnestLight1602-hint.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -80,7 +47,7 @@
   src:
     local("Onest Medium"),
     local("Onest-Medium"),
-    url("../../fonts/Onest/OnestMedium1602-hint.woff") format("woff");
+    url("../../fonts/OnestMedium1602-hint.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -91,7 +58,7 @@
   src:
     local("Onest Bold"),
     local("Onest-Bold"),
-    url("../../fonts/Onest/OnestBold1602-hint.woff") format("woff");
+    url("../../fonts/OnestBold1602-hint.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -102,7 +69,7 @@
   src:
     local("Onest ExtraBold"),
     local("Onest-ExtraBold"),
-    url("../../fonts/Onest/OnestExtraBold1602-hint.woff") format("woff");
+    url("../../fonts/OnestExtraBold1602-hint.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -113,7 +80,7 @@
   src:
     local("Onest Black"),
     local("Onest-Black"),
-    url("../../fonts/Onest/OnestBlack1602-hint.woff") format("woff");
+    url("../../fonts/OnestBlack1602-hint.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;

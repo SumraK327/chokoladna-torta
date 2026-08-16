@@ -29,4 +29,9 @@
     <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
+	<symbol id="arrow_ideas" viewBox="0 0 30 28" fill="none">
+    <path d="M7.31464 20.4816L21.9444 6.82715" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+		<path d="M7.31464 6.82715H21.9444V20.4816" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
 </svg>
