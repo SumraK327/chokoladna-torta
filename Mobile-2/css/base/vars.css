@@ -1,0 +1,29 @@
+:root {
+  /* fonts */
+  --font-family: "Inter", sans-serif;
+  --second-family: "Onest", sans-serif;
+  --third-family: "ReadexPro", sans-serif;
+
+  /* colors */
+  --bg-color: #fff;
+  --bg-article: #f0f5fa;
+  --text-article: #4b4b4b;
+  --main-color: #000;
+
+  --link-color: #000;
+  --link-hover-color: #000;
+
+  --color-button-bg: #dce5e2;
+  --color-button-text: #000;
+
+  --heading-color: #000;
+
+  /* shadows */
+  --shadow-color: #181817; /* .header--fixed, .header__menu (burger)  */
+  --shadow-color2: rgba(0, 0, 0, 0.25); /* .ofers  */
+
+  --box-shadow: 0 4px 35px 0 var(--shadow-color2);
+
+  /* transitions */
+  --transition-time: 0.5s;
+}
