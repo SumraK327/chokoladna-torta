@@ -131,10 +131,6 @@
   border-radius: 0;
 }
 
-@media (max-width: 1250px) {
-  .swiper__slide-content {
-  }
-}
 @media (max-width: 768px) {
   .swiper__slide-iner {
     flex-direction: column;
@@ -158,10 +154,6 @@
 /*-------------- offers --------------*/
 .offers {
   padding: 0 0 30px 0;
-  border: 3px solid rgb(4, 255, 0);
-}
-.offers__title {
-  margin: 0 0 10px 0;
 }
 .offers__text {
   margin: 0 auto 55px auto;
@@ -172,7 +164,7 @@
   gap: 16px;
 }
 .offers__box-left {
-  width: 50%;
+  width: 46%;
   display: flex;
   gap: 16px;
   flex-direction: column;
@@ -188,10 +180,6 @@
 .offers__laptops-title {
   margin: 10px 0 0 0;
 }
-.title-h4 {
-}
-.offers__laptops-description {
-}
 .offers__accessories {
   padding: 10px 42px 10px 42px;
   box-shadow: var(--box-shadow);
@@ -199,19 +187,16 @@
   transform: translateY(25px);
 }
 .offers__accessories-img {
-  max-width: 380px;
+  /* min-width: 320px, max-width: 700px */
+  max-width: clamp(155px, -2.155rem + 59.21vw, 380px);
 }
 .offers__accessories-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.offers__accessories-title {
-}
-.offers__accessories-description {
-}
 .offers__box-right {
-  width: 50%;
+  width: 54%;
   display: flex;
   gap: 16px;
 }
@@ -229,6 +214,7 @@
   padding: 0 0 40px 0;
 }
 .offers__phones-title {
+  margin: 0 0 10px 0;
   text-align: center;
 }
 .offers__phones-description {
@@ -242,14 +228,194 @@
   padding: 40px 0 0 0;
 }
 .offers__tablets-title {
+  margin: 0 0 10px 0;
   text-align: center;
 }
 .offers__tablets-description {
   text-align: center;
 }
 
-.delete img {
-  width: 100%;
+@media (max-width: 1024px) {
+  .offers__laptops {
+    margin: 0 0 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .offers__box-left {
+    gap: 0px;
+  }
+  .offers__accessories {
+    padding: 10px 22px 10px 22px;
+  }
+  .offers__laptops {
+    margin: 0 0 30px 0;
+    padding: 10px 22px 10px 10px;
+  }
+}
+@media (max-width: 700px) {
+  .offers__container {
+    flex-direction: column;
+  }
+  .offers__accessories {
+    transform: translateY(0px);
+    justify-content: space-between;
+  }
+  .offers__laptops {
+    margin: 0 0 0 0;
+  }
+  .offers__box-left {
+    gap: 16px;
+    width: 100%;
+  }
+  .offers__box-right {
+    width: 100%;
+  }
+  .offers__tablets-img {
+    padding: 15px 0 0 0;
+  }
+  .offers__phones-img {
+    padding: 0 0 15px 0;
+  }
+  .offers__laptops-title {
+    margin: 10px 0;
+  }
+  .offers__accessories-title {
+    margin: 0 0 10px 0;
+  }
+}
+
+/*---------- Economy / article ----------*/
+.economy__text {
+  margin: 0 0 30px 0;
+}
+.article-wrapper {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.article {
+  padding: 0 10px 10px 10px;
+  flex: 0 0 300px;
+  cursor: pointer;
+  transition: all var(--transition-time) ease;
+  display: flex;
+  flex-direction: column;
+}
+@media (any-hover: hover) {
+  .article:hover {
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.article__img {
+  display: flex;
+  justify-content: center;
+}
+.article__title {
+  margin: 10px 0;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 125%;
+  color: var(--main-color);
+}
+.article__description {
+  margin: 0 0 25px 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--text-article);
+  flex: 1;
+}
+.article__price {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: var(--main-color);
+}
+/*-------------- best --------------*/
+.best__text {
+  margin: 0 0 56px 0;
+}
+.best-card-wrapper {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.best-card {
+  padding: 40px 5px 0 5px;
+  flex: 0 0 410px;
+  transition: all var(--transition-time) ease;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: var(--bg-article);
+}
+.best-card__description {
+  margin: 0 0 5px 0;
+
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 129%;
+  text-align: center;
+  color: var(--main-color);
+}
+.best-card__title {
+  margin: 0 0 30px 0;
+
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--main-color);
+}
+.best-card__button {
+  margin: 0 0 30px 0;
+  padding: 14px 60px;
+  border: 1px solid var(--main-color);
+  border-radius: 200px;
+  align-self: center;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--main-color);
+}
+@media (any-hover: hover) {
+  .best-card__button:hover {
+    box-shadow: 0 3px 4px 0 rgb(0, 0, 0);
+    transform: translateY(-5px);
+  }
+}
+.best-card__img {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 450px) {
+  .best-card {
+    flex: 0 0 300px;
+  }
+  .best-card__button {
+    margin: 0 0 20px 0;
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+  .best-card__title {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+  }
+  .best-card {
+    padding: 30px 5px 0 5px;
+  }
 }
 
 /*-------------- 1 --------------*/
