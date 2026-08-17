@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/Phone-favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./img/Phone-favicon.png"
+      type="image/x-icon"
+    />
 
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
 
@@ -76,7 +80,8 @@
         var bootTime = Date.now();
 
         function hide() {
-          if (!preloader || preloader.classList.contains("preloader--hidden")) return;
+          if (!preloader || preloader.classList.contains("preloader--hidden"))
+            return;
           // минимум 800 мс на экране, чтобы оверлей не «мигал»
           var rest = Math.max(0, 800 - (Date.now() - bootTime));
           setTimeout(function () {
@@ -98,36 +103,53 @@
     </div>
     <div id="header"></div>
     <main class="main">
-      <!-- <section class="intro">
+      <section class="intro">
         <div class="container" id="intro-swiper"></div>
       </section>
 
       <section class="offers">
         <div class="container">
           <h2 class="offers__title title-h2">Новые предложения на сайте</h2>
-          <p class="offers__text text-1">Ноутбуки для продуктивной работы, смартфоны на каждый день, планшеты для творчества и умные часы для активного образа жизни. Загляните в наши категории и найдите технику, которая идеально подойдёт именно вам.</p>
+          <p class="offers__text text-1">
+            Ноутбуки для продуктивной работы, смартфоны на каждый день, планшеты
+            для творчества и умные часы для активного образа жизни. Загляните в
+            наши категории и найдите технику, которая идеально подойдёт именно
+            вам.
+          </p>
           <div class="offers__container">
             <div class="offers__box-left">
               <article class="offers__laptops">
                 <div class="offers__laptops-img">
                   <picture>
                     <source srcset="./img/offers/Laptop.webp" />
-                    <img class="" src="./img/offers/Laptop.png" alt="Серебристый ноутбук Apple MacBook Pro с ярким экраном, черной клавиатурой и большим трекпадом" />
+                    <img
+                      class=""
+                      src="./img/offers/Laptop.png"
+                      alt="Серебристый ноутбук Apple MacBook Pro с ярким экраном, черной клавиатурой и большим трекпадом"
+                    />
                   </picture>
                 </div>
                 <h4 class="offers__laptops-title title-h4">Ноутбуки</h4>
-                <p class="offers__laptops-description text-2">Твоя мобильная студия</p>
+                <p class="offers__laptops-description text-2">
+                  Твоя мобильная студия
+                </p>
               </article>
               <article class="offers__accessories">
                 <div class="offers__accessories-img">
                   <picture>
                     <source srcset="./img/offers/Watch.webp" />
-                    <img class="" src="./img/offers/Watch.png" alt="Умные часы с золотистым металлическим корпусом и круглым регулятором, на светлом бежевом кожаном ремешке с пряжкой, на экране яркий абстрактный фон в фиолетовых и голубых тонах" />
+                    <img
+                      class=""
+                      src="./img/offers/Watch.png"
+                      alt="Умные часы с золотистым металлическим корпусом и круглым регулятором, на светлом бежевом кожаном ремешке с пряжкой, на экране яркий абстрактный фон в фиолетовых и голубых тонах"
+                    />
                   </picture>
                 </div>
                 <div class="offers__accessories-wrapper">
                   <h4 class="offers__accessories-title title-h4">Часы</h4>
-                  <p class="offers__accessories-description text-2">Больше, чем время</p>
+                  <p class="offers__accessories-description text-2">
+                    Больше, чем время
+                  </p>
                 </div>
               </article>
             </div>
@@ -136,19 +158,31 @@
                 <div class="offers__phones-img">
                   <picture>
                     <source srcset="./img/offers/Phone.webp" />
-                    <img class="" src="./img/offers/Phone.png" alt="Два смартфона iPhone 12 в синем и зеленом цветах на белом фоне: один наклонен влево, второй перекрещен с ним, на экранах фирменные абстрактные обои" />
+                    <img
+                      class=""
+                      src="./img/offers/Phone.png"
+                      alt="Два смартфона iPhone 12 в синем и зеленом цветах на белом фоне: один наклонен влево, второй перекрещен с ним, на экранах фирменные абстрактные обои"
+                    />
                   </picture>
                 </div>
                 <h4 class="offers__phones-title title-h4">Телефоны</h4>
-                <p class="offers__phones-description text-2">Снимай. Общайся. Живи</p>
+                <p class="offers__phones-description text-2">
+                  Снимай. Общайся. Живи
+                </p>
               </article>
               <article class="offers__tablets">
                 <h4 class="offers__tablets-title title-h4">Планшеты</h4>
-                <p class="offers__tablets-description text-2">Твой холст, который всегда с тобой</p>
+                <p class="offers__tablets-description text-2">
+                  Твой холст, который всегда с тобой
+                </p>
                 <div class="offers__tablets-img">
                   <picture>
                     <source srcset="./img/offers/Tablet.webp" />
-                    <img class="" src="./img/offers/Tablet.png" alt="Черный планшет с тонкими рамками и фронтальной камерой, на черном экране стильный 3D-градиентный узор из фиолетовых, синих и бирюзовых изогнутых линий в виде абстрактной буквы M" />
+                    <img
+                      class=""
+                      src="./img/offers/Tablet.png"
+                      alt="Черный планшет с тонкими рамками и фронтальной камерой, на черном экране стильный 3D-градиентный узор из фиолетовых, синих и бирюзовых изогнутых линий в виде абстрактной буквы M"
+                    />
                   </picture>
                 </div>
               </article>
@@ -159,8 +193,13 @@
 
       <section class="economy">
         <div class="container">
-          <h2 class="economy__title title-h2">Экономьте на наших самых продаваемых товарах</h2>
-          <p class="economy__text text-1">Лимитированная подборка хитов сезона — по-особенному и по-особой цене</p>
+          <h2 class="economy__title title-h2">
+            Экономьте на наших самых продаваемых товарах
+          </h2>
+          <p class="economy__text text-1">
+            Лимитированная подборка хитов сезона — по-особенному и по-особой
+            цене
+          </p>
           <div class="article-wrapper">
             <article class="article">
               <div class="article__img">
@@ -170,7 +209,9 @@
                 </picture>
               </div>
               <div class="article__title">MacBook Pro 13</div>
-              <div class="article__description">Мощный чип и лёгкий корпус — работай и твори где угодно</div>
+              <div class="article__description">
+                Мощный чип и лёгкий корпус — работай и твори где угодно
+              </div>
               <div class="article__price">$ 1,200.00 USD</div>
             </article>
 
@@ -182,7 +223,10 @@
                 </picture>
               </div>
               <div class="article__title">Smart Galaxy Watch 3</div>
-              <div class="article__description">Классика снаружи, ум внутри: пульс, сон и тренировки под контролем</div>
+              <div class="article__description">
+                Классика снаружи, ум внутри: пульс, сон и тренировки под
+                контролем
+              </div>
               <div class="article__price">$ 199.00 USD</div>
             </article>
 
@@ -194,7 +238,9 @@
                 </picture>
               </div>
               <div class="article__title">MacBook Air M1</div>
-              <div class="article__description">Мощность M1 в корпусе, который не чувствуешь в рюкзаке</div>
+              <div class="article__description">
+                Мощность M1 в корпусе, который не чувствуешь в рюкзаке
+              </div>
               <div class="article__price">$ 1,009.00 USD</div>
             </article>
 
@@ -206,7 +252,10 @@
                 </picture>
               </div>
               <div class="article__title">iPad</div>
-              <div class="article__description">Экран больше телефона, легче ноутбука — кино, игры и заметки всегда с собой</div>
+              <div class="article__description">
+                Экран больше телефона, легче ноутбука — кино, игры и заметки
+                всегда с собой
+              </div>
               <div class="article__price">$ 610.00 USD</div>
             </article>
           </div>
@@ -216,7 +265,9 @@
       <section class="best">
         <div class="container">
           <h2 class="best__title title-h2">Лучшее — уже здесь</h2>
-          <p class="best__text text-1">Новинки, хиты продаж и весь каталог — выбирай, с чего начать</p>
+          <p class="best__text text-1">
+            Новинки, хиты продаж и весь каталог — выбирай, с чего начать
+          </p>
           <div class="best-card-wrapper">
             <article class="best-card">
               <div class="best-card__description">Набор умных часов</div>
@@ -258,17 +309,41 @@
       <section class="ideas">
         <div class="container">
           <h2 class="ideas__title title-h2">Идеям — своё место</h2>
-          <p class="ideas__text text-1">Статьи, обзоры и гайды о технике, стиле и продуктивности: читай, вдохновляйся, выбирай</p>
+          <p class="ideas__text text-1">
+            Статьи, обзоры и гайды о технике, стиле и продуктивности: читай,
+            вдохновляйся, выбирай
+          </p>
           <div class="ideas__content">
             <picture>
               <source srcset="./img/ideas/ideas-1.webp" />
-              <img class="" src="./img/ideas/ideas-1.png" alt="Рука держит раскрытый журнал: на страницах чёрно-белые фотографии людей в белом минималистичном интерьере с мягким светом из окон" />
+              <img
+                class=""
+                src="./img/ideas/ideas-1.png"
+                alt="Рука держит раскрытый журнал: на страницах чёрно-белые фотографии людей в белом минималистичном интерьере с мягким светом из окон"
+              />
             </picture>
             <ul class="ideas__list">
-              <li class="ideas__item"><a href="##" class="ideas__link">Как выбрать ноутбук для работы и творчества — короткий гайд...</a></li>
-              <li class="ideas__item"><a href="##" class="ideas__link">Гаджеты в дороге: что сделает поездку проще...</a></li>
-              <li class="ideas__item"><a href="##" class="ideas__link">Главные секреты творческих людей...</a></li>
-              <li class="ideas__item"><a href="##" class="ideas__link">Минимализм в технике: меньше вещей — больше идей...</a></li>
+              <li class="ideas__item">
+                <a href="##" class="ideas__link"
+                  >Как выбрать ноутбук для работы и творчества — короткий
+                  гайд...</a
+                >
+              </li>
+              <li class="ideas__item">
+                <a href="##" class="ideas__link"
+                  >Гаджеты в дороге: что сделает поездку проще...</a
+                >
+              </li>
+              <li class="ideas__item">
+                <a href="##" class="ideas__link"
+                  >Главные секреты творческих людей...</a
+                >
+              </li>
+              <li class="ideas__item">
+                <a href="##" class="ideas__link"
+                  >Минимализм в технике: меньше вещей — больше идей...</a
+                >
+              </li>
             </ul>
           </div>
           <a class="ideas__more" href="##">
@@ -278,30 +353,54 @@
             </svg>
           </a>
         </div>
-      </section> -->
+      </section>
 
       <section class="search">
         <div class="container">
           <h2 class="search__title title-h2">Не нашёл своё — поищи здесь</h2>
-          <p class="search__text text-1">Не видишь нужного на витрине? Оно точно есть в каталоге — просто спроси</p>
+          <p class="search__text text-1">
+            Не видишь нужного на витрине? Оно точно есть в каталоге — просто
+            спроси
+          </p>
           <form class="search__form" action="#">
             <svg width="30" height="29">
-              <use class="header__actions-icon" href="./img/icons/sprite.svg#search"></use>
+              <use
+                class="header__actions-icon"
+                href="./img/icons/sprite.svg#search"
+              ></use>
             </svg>
-            <input class="search__input" type="search" placeholder="Найди свой девайс" />
+            <input
+              class="search__input"
+              type="search"
+              placeholder="Найди свой девайс"
+            />
           </form>
           <ul class="search__tags">
             <li><button class="search__tag" type="button">iPhone</button></li>
             <li><button class="search__tag" type="button">Зарядка</button></li>
             <li><button class="search__tag" type="button">Подарки</button></li>
-            <li><button class="search__tag" type="button">Google Pixel 3</button></li>
-            <li><button class="search__tag" type="button">Клавиатуры</button></li>
-            <li><button class="search__tag" type="button">13 Pro Max</button></li>
-            <li><button class="search__tag" type="button">iPhone 12</button></li>
+            <li>
+              <button class="search__tag" type="button">Google Pixel 3</button>
+            </li>
+            <li>
+              <button class="search__tag" type="button">Клавиатуры</button>
+            </li>
+            <li>
+              <button class="search__tag" type="button">13 Pro Max</button>
+            </li>
+            <li>
+              <button class="search__tag" type="button">iPhone 12</button>
+            </li>
             <li><button class="search__tag" type="button">Ноутбуки</button></li>
-            <li><button class="search__tag" type="button">Смартфоны</button></li>
-            <li><button class="search__tag" type="button">Смарт-часы</button></li>
-            <li><button class="search__tag" type="button">Пауэрбанк</button></li>
+            <li>
+              <button class="search__tag" type="button">Смартфоны</button>
+            </li>
+            <li>
+              <button class="search__tag" type="button">Смарт-часы</button>
+            </li>
+            <li>
+              <button class="search__tag" type="button">Пауэрбанк</button>
+            </li>
             <li><button class="search__tag" type="button">Наушники</button></li>
           </ul>
         </div>
@@ -311,14 +410,27 @@
         <div class="container">
           <div class="news__wrapper">
             <h2 class="news__title title-h2">Будь в курсе первым</h2>
-            <p class="news__text text-1">Оставь почту, и мы сообщим о скидках и новинках раньше всех</p>
+            <p class="news__text text-1">
+              Оставь почту, и мы сообщим о скидках и новинках раньше всех
+            </p>
             <picture class="news__img">
-              <source srcset="" />
-              <img class="" src="" alt="" />
+              <source srcset="./img/news/news-1.webp" />
+              <img
+                class=""
+                src="./img/news/news-1.png"
+                alt="Открытый тёмно-серый ноутбук с тёмно-фиолетовым абстрактным узором на экране; над ним два наклонённых накрест смартфона с сине-зелёными круговыми узорами на экранах и сверху золотистые умные часы на светлом ремешке с фиолетово-голубым экраном"
+              />
             </picture>
             <form class="news__form">
-              <input class="news__input" type="email" name="email" placeholder="Твоя почта" required aria-label="Электронная почта для подписки на новости" />
-              <button class="news__button" type="submit">Подписаться</button>
+              <input
+                class="news__input"
+                type="email"
+                name="email"
+                placeholder="Твоя почта"
+                required
+                aria-label="Электронная почта для подписки на новости"
+              />
+              <button class="news__button" type="submit">Sign up</button>
             </form>
           </div>
         </div>
