@@ -5,14 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/Phone-favicon.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./css/index.css" />
 
     <title>California</title>
+
+    <style>
+      /* прелоадер: стили инлайном, чтобы работали до загрузки основных css */
+      .preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        justify-content: center;
+        background: #f4f6f8;
+        color: #070847;
+        font-family: system-ui, sans-serif;
+        transition:
+          opacity 0.4s ease,
+          visibility 0.4s ease;
+      }
+      .preloader--hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .preloader__logo {
+        width: 64px;
+        animation: preloader-pulse 1.2s ease-in-out infinite;
+      }
+      .preloader__spinner {
+        width: 34px;
+        height: 34px;
+        border: 3px solid rgb(7 8 71 / 0.15);
+        border-top-color: #00c3ff;
+        border-radius: 50%;
+        animation: preloader-spin 0.8s linear infinite;
+      }
+      .preloader__text {
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      @keyframes preloader-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes preloader-pulse {
+        50% {
+          opacity: 0.35;
+        }
+      }
+    </style>
   </head>
 
   <body class="body" id="main">
+    <div class="preloader" id="preloader" role="status">
+      <img class="preloader__logo" src="./img/Phone-favicon.png" alt="" />
+      <div class="preloader__spinner"></div>
+      <p class="preloader__text">Загрузка…</p>
+    </div>
+    <script>
+      (function () {
+        var preloader = document.getElementById("preloader");
+        var bootTime = Date.now();
+
+        function hide() {
+          if (!preloader || preloader.classList.contains("preloader--hidden")) return;
+          // минимум 800 мс на экране, чтобы оверлей не «мигал»
+          var rest = Math.max(0, 800 - (Date.now() - bootTime));
+          setTimeout(function () {
+            preloader.classList.add("preloader--hidden");
+            setTimeout(function () {
+              preloader.remove();
+            }, 500);
+          }, rest);
+        }
+
+        window.addEventListener("load", hide); // страница готова целиком
+        setTimeout(hide, 3000); // страховка: не висим дольше 3 секунд
+      })();
+    </script>
     <div class="back">
       <a href="https://sumrak327.github.io/chokoladna-torta/">
         <button class="button">← Назад</button>
@@ -23,6 +101,7 @@
       <section class="intro">
         <div class="container" id="intro-swiper"></div>
       </section>
+
       <section class="offers">
         <div class="container">
           <h2 class="offers__title title-h2">Новые предложения на сайте</h2>
@@ -77,6 +156,7 @@
           </div>
         </div>
       </section>
+
       <section class="economy">
         <div class="container">
           <h2 class="economy__title title-h2">Экономьте на наших самых продаваемых товарах</h2>
@@ -132,6 +212,7 @@
           </div>
         </div>
       </section>
+
       <section class="best">
         <div class="container">
           <h2 class="best__title title-h2">Лучшее — уже здесь</h2>
@@ -173,6 +254,7 @@
           </div>
         </div>
       </section>
+
       <section class="ideas">
         <div class="container">
           <h2 class="ideas__title title-h2">Идеям — своё место</h2>
@@ -197,6 +279,7 @@
           </a>
         </div>
       </section>
+
       <section class="search">
         <div class="container">
           <h2 class="search__title title-h2">Не нашёл своё — поищи здесь</h2>
@@ -223,6 +306,7 @@
           </ul>
         </div>
       </section>
+
       <section class="news">
         <div class="container">
           <h2 class="news__title title-h2">Будь в курсе первым</h2>
@@ -240,7 +324,9 @@
         .then((f) => (document.getElementById("footer").innerHTML = f));
     </script>
 
+    <!-- Swiper теперь локально (папка swiper/): модуль импортируется в js/slider.js, CDN-скрипт не нужен
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    -->
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>

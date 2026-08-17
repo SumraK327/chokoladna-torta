@@ -1,6 +1,7 @@
+import Swiper from "../swiper/swiper-bundle.min.mjs";
+
 export const Slider = () => {
   const sliderElement = document.querySelector(".swiper__container");
-
   if (!sliderElement) {
     return;
   }
