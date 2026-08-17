@@ -1,7 +1,16 @@
 #footer {
-	margin-top: auto;
+  margin-top: auto;
 }
 .footer {
-	border: 1px solid rgba(150, 101, 240, 0.685);
-	min-height: 220px;
+  border: 1px solid rgba(150, 101, 240, 0.685);
+  min-height: 220px;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  gap: 10px;
+}
+.footer__col {
+  background: var(--color-button-text);
+  min-height: 200px;
 }
