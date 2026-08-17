@@ -11,6 +11,10 @@
 .header--fixed {
   box-shadow: 0 10px 20px -15px var(--shadow-color);
 }
+.header--hidden {
+  transform: translateY(-100%);
+}
+
 .header__container {
   display: flex;
   align-items: center;
