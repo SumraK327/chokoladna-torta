@@ -98,7 +98,7 @@
     </div>
     <div id="header"></div>
     <main class="main">
-      <section class="intro">
+      <!-- <section class="intro">
         <div class="container" id="intro-swiper"></div>
       </section>
 
@@ -278,7 +278,7 @@
             </svg>
           </a>
         </div>
-      </section>
+      </section> -->
 
       <section class="search">
         <div class="container">
@@ -309,8 +309,18 @@
 
       <section class="news">
         <div class="container">
-          <h2 class="news__title title-h2">Будь в курсе первым</h2>
-          <p class="news__text text-1">Оставь почту, и мы сообщим о скидках и новинках раньше всех</p>
+          <div class="news__wrapper">
+            <h2 class="news__title title-h2">Будь в курсе первым</h2>
+            <p class="news__text text-1">Оставь почту, и мы сообщим о скидках и новинках раньше всех</p>
+            <picture class="news__img">
+              <source srcset="" />
+              <img class="" src="" alt="" />
+            </picture>
+            <form class="news__form">
+              <input class="news__input" type="email" name="email" placeholder="Твоя почта" required aria-label="Электронная почта для подписки на новости" />
+              <button class="news__button" type="submit">Подписаться</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
