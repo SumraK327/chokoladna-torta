@@ -10,7 +10,6 @@
   background-color: var(--bg-color);
   margin: 0;
   padding: 0;
-  padding-bottom: 1000px;
   min-width: 320px;
   display: flex;
   flex-direction: column;
@@ -18,14 +17,6 @@
 }
 .body--no-scroll {
   overflow: hidden;
-}
-
-/* страховка от горизонтального оверфлоу:
-   clip не создаёт скролл-контейнер и не ломает position: sticky */
-html,
-body {
-  overflow-x: hidden;
-  overflow-x: clip;
 }
 
 /* ===== Универсальный сброс отступов и box-sizing ===== */
@@ -136,9 +127,6 @@ a {
   line-height: 120%;
   color: var(--main-color);
   transition: all var(--transition-time) ease;
-}
-.link-after {
-  display: inline-block;
 }
 .link-after::after {
   content: "";
