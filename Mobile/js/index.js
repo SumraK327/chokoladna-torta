@@ -6,9 +6,7 @@ try {
   const headerFixed = new HeaderFixed({
     HEADER: "header",
     HEADER_FIXED: "header--fixed",
-    HEADER_HIDDEN: "header--hidden",
     PAGE_BODY_NO_SCROLL: "body--no-scroll",
-    HIDE_THRESHOLD: 200, // px в одну сторону до скрытия/появления шапки
   });
 
   new BurgerMenu(
