@@ -11,6 +11,11 @@
 .header--fixed {
   box-shadow: 0 10px 20px -15px var(--shadow-color);
 }
+/* при открытом бургер-меню шапка всегда видима и отделяется тенью от панели */
+.body--no-scroll .header {
+  transform: none;
+  box-shadow: 0 10px 20px -15px var(--shadow-color);
+}
 .header--hidden {
   transform: translateY(-100%);
 }
@@ -21,7 +26,7 @@
   justify-content: space-between;
   min-height: 80px;
 }
-.header__logo {
+.logo {
   flex-shrink: 0;
 }
 
@@ -82,11 +87,15 @@
     gap: 35px;
   }
   .header__menu {
-    padding: 144px 15px 0 0;
+    padding: 30px 15px 0 0;
     position: fixed;
-    right: -100vw;
-    top: 0;
+    right: 0;
+    top: 80px; /* панель начинается ПОД шапкой — шапка остаётся видимой, в ней крестик */
     bottom: 0;
+    /* прячем через transform, а не right: -100vw:
+       transform на шапке ломает fixed у потомков, и -100vw растягивал
+       документ вдвое шире экрана — тач-скролл прыгал */
+    transform: translateX(100%);
     background: var(--bg-article);
     min-width: 300px;
     z-index: 100;
@@ -98,7 +107,7 @@
     transition: all var(--transition-time) ease;
   }
   .header__menu--open {
-    right: 0;
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }
@@ -127,7 +136,7 @@
   }
 }
 
-/* ===== Выпадающее меню «Решения» ===== */
+/* ===== Выпадающее меню ===== */
 
 .menu__link--dropdown {
   position: relative;
