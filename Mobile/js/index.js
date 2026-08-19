@@ -1,6 +1,6 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
-import { Slider } from "./slider.js";
+import { BestSlider, Slider } from "./slider.js";
 
 try {
   const headerFixed = new HeaderFixed({
@@ -40,6 +40,8 @@ try {
       searchInput.focus();
     });
   }
+
+  BestSlider();
 
   fetch("intro-swiper.html")
     .then((r) => r.text())

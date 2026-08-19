@@ -268,40 +268,80 @@
           <p class="best__text text-1">
             Новинки, хиты продаж и весь каталог — выбирай, с чего начать
           </p>
-          <div class="best-card-wrapper">
-            <article class="best-card">
-              <div class="best-card__description">Набор умных часов</div>
-              <div class="best-card__title">Самое новое — уже здесь</div>
-              <button class="best-card__button">Смотреть коллекцию</button>
-              <div class="best-card__img">
-                <picture>
-                  <source srcset="./img/best/Watch.webp" />
-                  <img class="" src="./img/best/Watch.png" alt="" />
-                </picture>
-              </div>
-            </article>
-            <article class="best-card">
-              <div class="best-card__description">То, что берут чаще всего</div>
-              <div class="best-card__title">Бестселлеры сезона</div>
-              <button class="best-card__button">Смотреть подборку</button>
-              <div class="best-card__img">
-                <picture>
-                  <source srcset="./img/best/Set-1.webp" />
-                  <img class="" src="./img/best/Set-1.png" alt="" />
-                </picture>
-              </div>
-            </article>
-            <article class="best-card">
-              <div class="best-card__description">От часов до ноутбуков</div>
-              <div class="best-card__title">Всё и сразу</div>
-              <button class="best-card__button">Выбрать</button>
-              <div class="best-card__img">
-                <picture>
-                  <source srcset="./img/best/Set-2.webp" />
-                  <img class="" src="./img/best/Set-2.png" alt="" />
-                </picture>
-              </div>
-            </article>
+          <div class="best__slider swiper">
+            <div class="best-card-wrapper swiper-wrapper">
+              <article class="best-card swiper-slide">
+                <div class="best-card__description">Набор умных часов</div>
+                <div class="best-card__title">Новое — уже здесь</div>
+                <button class="best-card__button">Смотреть коллекцию</button>
+                <div class="best-card__img">
+                  <picture>
+                    <source srcset="./img/best/Watch.webp" />
+                    <img class="" src="./img/best/Watch.png" alt="" />
+                  </picture>
+                </div>
+              </article>
+
+              <article class="best-card swiper-slide">
+                <div class="best-card__description">
+                  То, что берут чаще всего
+                </div>
+                <div class="best-card__title">Бестселлеры сезона</div>
+                <button class="best-card__button">Смотреть подборку</button>
+                <div class="best-card__img">
+                  <picture>
+                    <source srcset="./img/best/Set-1.webp" />
+                    <img class="" src="./img/best/Set-1.png" alt="" />
+                  </picture>
+                </div>
+              </article>
+
+              <article class="best-card swiper-slide">
+                <div class="best-card__description">От часов до ноутбуков</div>
+                <div class="best-card__title">Всё и сразу</div>
+                <button class="best-card__button">Выбрать</button>
+                <div class="best-card__img">
+                  <picture>
+                    <source srcset="./img/best/Set-2.webp" />
+                    <img class="" src="./img/best/Set-2.png" alt="" />
+                  </picture>
+                </div>
+              </article>
+
+              <article class="best-card swiper-slide">
+                <div class="best-card__description">От учёбы до работы</div>
+                <div class="best-card__title">Ноутбук для любых задач</div>
+                <button class="best-card__button">Выбрать ноутбук</button>
+                <div class="best-card__img">
+                  <picture>
+                    <source srcset="" />
+                    <img class="" src="./img/best/laptops.png" alt="" />
+                  </picture>
+                </div>
+              </article>
+
+              <article class="best-card swiper-slide">
+                <div class="best-card__description">Для игр и работы</div>
+                <div class="best-card__title">Мощь в каждой детали</div>
+                <button class="best-card__button">Собрать компьютер</button>
+                <div class="best-card__img">
+                  <picture>
+                    <source srcset="" />
+                    <img class="" src="./img/best/desktop-pc.png" alt="" />
+                  </picture>
+                </div>
+              </article>
+            </div>
+            <button
+              class="swiper-button-prev best__button--prev"
+              type="button"
+              aria-label="Предыдущий слайд"
+            ></button>
+            <button
+              class="swiper-button-next best__button--next"
+              type="button"
+              aria-label="Следующий слайд"
+            ></button>
           </div>
         </div>
       </section>
