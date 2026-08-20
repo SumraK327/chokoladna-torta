@@ -1,12 +1,14 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
-import { BestSlider, Slider } from "./slider.js";
+import { Slider } from "./slider.js";
 
 try {
   const headerFixed = new HeaderFixed({
     HEADER: "header",
     HEADER_FIXED: "header--fixed",
+    HEADER_HIDDEN: "header--hidden",
     PAGE_BODY_NO_SCROLL: "body--no-scroll",
+    HIDE_THRESHOLD: 200, // px в одну сторону до скрытия/появления шапки
   });
 
   new BurgerMenu(
@@ -19,7 +21,7 @@ try {
         OPEN: "Открыть меню",
         CLOSE: "Закрыть меню",
       },
-      PAGE_BODY: "body",
+      PAGE_BODY: "html",
       PAGE_BODY_NO_SCROLL: "body--no-scroll",
       MENU_LINK: "menu__link",
       BREAKPOINT: 768,
@@ -40,8 +42,6 @@ try {
       searchInput.focus();
     });
   }
-
-  BestSlider();
 
   fetch("intro-swiper.html")
     .then((r) => r.text())

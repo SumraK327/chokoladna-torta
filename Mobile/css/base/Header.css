@@ -5,13 +5,12 @@
 #header {
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 101;
   margin: 0 0 30px 0;
 }
 .header--fixed {
   box-shadow: 0 10px 20px -15px var(--shadow-color);
 }
-
 
 .header__container {
   display: flex;
@@ -125,7 +124,7 @@
   }
 }
 
-/* ===== Выпадающее меню «Решения» ===== */
+/* ===== Выпадающее меню ===== */
 
 .menu__link--dropdown {
   position: relative;

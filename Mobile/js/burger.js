@@ -85,6 +85,7 @@ export default class BurgerMenu {
 				this.headerFixedInstance.updateFixedClass();
 			}
 		}
+
 	}
 
 	hideBurgerMenu() {
