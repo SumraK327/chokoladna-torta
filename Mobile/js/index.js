@@ -1,6 +1,6 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
-import { Slider } from "./slider.js";
+import { Slider, BestSlider } from "./slider.js";
 
 try {
   const headerFixed = new HeaderFixed({
@@ -28,6 +28,8 @@ try {
     },
     headerFixed,
   );
+
+  BestSlider();
 
   // Поиск: клик по тегу — его текст подставляется в строку поиска
   const searchTags = document.querySelector(".search__tags");
