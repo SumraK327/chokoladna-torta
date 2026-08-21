@@ -121,10 +121,14 @@
               <article class="offers__laptops">
                 <div class="offers__laptops-img">
                   <picture>
-                    <source srcset="./img/offers/Laptop.webp" />
+                    <source
+                      srcset="./img/offers/Laptop.webp"
+                      type="image/webp"
+                    />
                     <img
                       class=""
                       src="./img/offers/Laptop.png"
+                      decoding="async"
                       alt="Серебристый ноутбук Apple MacBook Pro с ярким экраном, черной клавиатурой и большим трекпадом"
                     />
                   </picture>
@@ -137,8 +141,12 @@
               <article class="offers__accessories">
                 <div class="offers__accessories-img">
                   <picture>
-                    <source srcset="./img/offers/Watch.webp" />
+                    <source
+                      srcset="./img/offers/Watch.webp"
+                      type="image/webp"
+                    />
                     <img
+                      decoding="async"
                       class=""
                       src="./img/offers/Watch.png"
                       alt="Умные часы с золотистым металлическим корпусом и круглым регулятором, на светлом бежевом кожаном ремешке с пряжкой, на экране яркий абстрактный фон в фиолетовых и голубых тонах"
@@ -157,8 +165,12 @@
               <article class="offers__phones">
                 <div class="offers__phones-img">
                   <picture>
-                    <source srcset="./img/offers/Phone.webp" />
+                    <source
+                      srcset="./img/offers/Phone.webp"
+                      type="image/webp"
+                    />
                     <img
+                      decoding="async"
                       class=""
                       src="./img/offers/Phone.png"
                       alt="Два смартфона iPhone 12 в синем и зеленом цветах на белом фоне: один наклонен влево, второй перекрещен с ним, на экранах фирменные абстрактные обои"
@@ -177,8 +189,12 @@
                 </p>
                 <div class="offers__tablets-img">
                   <picture>
-                    <source srcset="./img/offers/Tablet.webp" />
+                    <source
+                      srcset="./img/offers/Tablet.webp"
+                      type="image/webp"
+                    />
                     <img
+                      decoding="async"
                       class=""
                       src="./img/offers/Tablet.png"
                       alt="Черный планшет с тонкими рамками и фронтальной камерой, на черном экране стильный 3D-градиентный узор из фиолетовых, синих и бирюзовых изогнутых линий в виде абстрактной буквы M"
@@ -200,64 +216,150 @@
             Лимитированная подборка хитов сезона — по-особенному и по-особой
             цене
           </p>
-          <div class="article-wrapper">
-            <article class="article">
-              <div class="article__img">
-                <picture>
-                  <source srcset="./img/economy/MacBook-Pro-13.webp" />
-                  <img class="" src="./img/economy/MacBook-Pro-13.png" alt="" />
-                </picture>
-              </div>
-              <div class="article__title">MacBook Pro 13</div>
-              <div class="article__description">
-                Мощный чип и лёгкий корпус — работай и твори где угодно
-              </div>
-              <div class="article__price">$ 1,200.00 USD</div>
-            </article>
+          <div class="swiper economy__slider">
+            <div class="article-wrapper swiper-wrapper">
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <source
+                      srcset="./img/economy/MacBook-Pro-13.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/economy/MacBook-Pro-13.png"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div class="article__title">MacBook Pro 13</div>
+                <div class="article__description">
+                  Мощный чип и лёгкий корпус — работай и твори где угодно
+                </div>
+                <div class="article__price">$ 1,200.00 USD</div>
+              </article>
 
-            <article class="article">
-              <div class="article__img">
-                <picture>
-                  <source srcset="./img/economy/Galaxy-Watch-3.webp" />
-                  <img class="" src="./img/economy/Galaxy-Watch-3.png" alt="" />
-                </picture>
-              </div>
-              <div class="article__title">Smart Galaxy Watch 3</div>
-              <div class="article__description">
-                Классика снаружи, ум внутри: пульс, сон и тренировки под
-                контролем
-              </div>
-              <div class="article__price">$ 199.00 USD</div>
-            </article>
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <source
+                      srcset="./img/economy/Galaxy-Watch-3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/economy/Galaxy-Watch-3.png"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div class="article__title">Smart Galaxy Watch 3</div>
+                <div class="article__description">
+                  Классика снаружи, ум внутри: пульс, сон и тренировки под
+                  контролем
+                </div>
+                <div class="article__price">$ 199.00 USD</div>
+              </article>
 
-            <article class="article">
-              <div class="article__img">
-                <picture>
-                  <source srcset="./img/economy/MacBook-Air-M1.webp" />
-                  <img class="" src="./img/economy/MacBook-Air-M1.png" alt="" />
-                </picture>
-              </div>
-              <div class="article__title">MacBook Air M1</div>
-              <div class="article__description">
-                Мощность M1 в корпусе, который не чувствуешь в рюкзаке
-              </div>
-              <div class="article__price">$ 1,009.00 USD</div>
-            </article>
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <source
+                      srcset="./img/economy/MacBook-Air-M1.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/economy/MacBook-Air-M1.png"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div class="article__title">MacBook Air M1</div>
+                <div class="article__description">
+                  Мощность M1 в корпусе, который не чувствуешь в рюкзаке
+                </div>
+                <div class="article__price">$ 1,009.00 USD</div>
+              </article>
 
-            <article class="article">
-              <div class="article__img">
-                <picture>
-                  <source srcset="./img/economy/iPad.webp" />
-                  <img class="" src="./img/economy/iPad.png" alt="" />
-                </picture>
-              </div>
-              <div class="article__title">iPad</div>
-              <div class="article__description">
-                Экран больше телефона, легче ноутбука — кино, игры и заметки
-                всегда с собой
-              </div>
-              <div class="article__price">$ 610.00 USD</div>
-            </article>
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <source
+                      srcset="./img/economy/iPad.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/economy/iPad.png"
+                      alt=""
+                    />
+                  </picture>
+                </div>
+                <div class="article__title">iPad</div>
+                <div class="article__description">
+                  Экран больше телефона, легче ноутбука — кино, игры и заметки
+                  всегда с собой
+                </div>
+                <div class="article__price">$ 610.00 USD</div>
+              </article>
+
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <img class="" src="./img/economy/powerbanks.png" alt="" />
+                  </picture>
+                </div>
+                <div class="article__title">Power Bank 20 000 mAh</div>
+                <div class="article__description">
+                  Ёмкий аккумулятор для полной зарядки смартфона и планшета.
+                  Мощный, компактный и всегда готов выручить в дороге
+                </div>
+                <div class="article__price">$ 49.00 USD</div>
+              </article>
+
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <img class="" src="./img/economy/phone.png" alt="" />
+                  </picture>
+                </div>
+                <div class="article__title">NeoPhone X1 Pro</div>
+                <div class="article__description">
+                  Яркий экран, мощный процессор и футуристичный дизайн —
+                  цифровой мир всегда под рукой.
+                </div>
+                <div class="article__price">$ 899.00 USD</div>
+              </article>
+
+              <article class="article swiper-slide">
+                <div class="article__img">
+                  <picture>
+                    <img class="" src="./img/economy/monitor-2.png" alt="" />
+                  </picture>
+                </div>
+                <div class="article__title">ProView 27 OLED Sharp</div>
+                <div class="article__description">
+                  Широкий цветовой охват, кристальная чёткость и элегантная
+                  подставка — идеальный экран для работы и творчества
+                </div>
+                <div class="article__price">$ 849.00 USD</div>
+              </article>
+            </div>
+            <button
+              class="swiper-button-prev economy__button--prev"
+              type="button"
+              aria-label="Предыдущий слайд"
+            ></button>
+            <button
+              class="swiper-button-next economy__button--next"
+              type="button"
+              aria-label="Следующий слайд"
+            ></button>
           </div>
         </div>
       </section>
@@ -276,8 +378,14 @@
                 <button class="best-card__button">Смотреть коллекцию</button>
                 <div class="best-card__img">
                   <picture>
-                    <source srcset="./img/best/Watch.webp" />
-                    <img class="" src="./img/best/Watch.png" alt="" />
+                    <source srcset="./img/best/Watch.webp" type="image/webp" />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/best/Watch.png"
+                      decoding="async"
+                      alt=""
+                    />
                   </picture>
                 </div>
               </article>
@@ -290,8 +398,13 @@
                 <button class="best-card__button">Смотреть подборку</button>
                 <div class="best-card__img">
                   <picture>
-                    <source srcset="./img/best/Set-1.webp" />
-                    <img class="" src="./img/best/Set-1.png" alt="" />
+                    <source srcset="./img/best/Set-1.webp" type="image/webp" />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/best/Set-1.png"
+                      alt=""
+                    />
                   </picture>
                 </div>
               </article>
@@ -302,8 +415,13 @@
                 <button class="best-card__button">Выбрать</button>
                 <div class="best-card__img">
                   <picture>
-                    <source srcset="./img/best/Set-2.webp" />
-                    <img class="" src="./img/best/Set-2.png" alt="" />
+                    <source srcset="./img/best/Set-2.webp" type="image/webp" />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/best/Set-2.png"
+                      alt=""
+                    />
                   </picture>
                 </div>
               </article>
@@ -314,8 +432,13 @@
                 <button class="best-card__button">Выбрать ноутбук</button>
                 <div class="best-card__img">
                   <picture>
-                    <source srcset="" />
-                    <img class="" src="./img/best/laptops.png" alt="" />
+                    <source srcset="" type="image/webp" />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/best/laptops.png"
+                      alt=""
+                    />
                   </picture>
                 </div>
               </article>
@@ -324,10 +447,15 @@
                 <div class="best-card__description">Для игр и работы</div>
                 <div class="best-card__title">Мощь в каждой детали</div>
                 <button class="best-card__button">Собрать компьютер</button>
-                <div class="best-card__img">
+                <div class="best-card__img" type="image/webp">
                   <picture>
-                    <source srcset="" />
-                    <img class="" src="./img/best/desktop-pc.png" alt="" />
+                    <source srcset="" type="image/webp" />
+                    <img
+                      decoding="async"
+                      class=""
+                      src="./img/best/desktop-pc.png"
+                      alt=""
+                    />
                   </picture>
                 </div>
               </article>
@@ -355,8 +483,9 @@
           </p>
           <div class="ideas__content">
             <picture>
-              <source srcset="./img/ideas/ideas-1.webp" />
+              <source srcset="./img/ideas/ideas-1.webp" type="image/webp" />
               <img
+                decoding="async"
                 class=""
                 src="./img/ideas/ideas-1.png"
                 alt="Рука держит раскрытый журнал: на страницах чёрно-белые фотографии людей в белом минималистичном интерьере с мягким светом из окон"
@@ -454,8 +583,9 @@
               Оставь почту, и мы сообщим о скидках и новинках раньше всех
             </p>
             <picture class="news__img">
-              <source srcset="./img/news/news-1.webp" />
+              <source srcset="./img/news/news-1.webp" type="image/webp" />
               <img
+                decoding="async"
                 class=""
                 src="./img/news/news-1.png"
                 alt="Открытый тёмно-серый ноутбук с тёмно-фиолетовым абстрактным узором на экране; над ним два наклонённых накрест смартфона с сине-зелёными круговыми узорами на экранах и сверху золотистые умные часы на светлом ремешке с фиолетово-голубым экраном"

@@ -36,6 +36,50 @@ export const Slider = () => {
   });
 };
 
+export const EconomySlider = () => {
+  const sliderElement = document.querySelector(".economy__slider");
+
+  if (!sliderElement) {
+    return;
+  }
+
+  new Swiper(sliderElement, {
+    slidesPerView: 1,
+    spaceBetween: 25,
+    loop: true,
+    speed: 700,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 5000,
+      reverseDirection: true,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+
+    mousewheel: {
+      forceToAxis: true,
+    },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      900: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+
+    navigation: {
+      prevEl: sliderElement.querySelector(".economy__button--prev"),
+      nextEl: sliderElement.querySelector(".economy__button--next"),
+    },
+  });
+};
+
 export const BestSlider = () => {
   const sliderElement = document.querySelector(".best__slider");
   if (!sliderElement) {
