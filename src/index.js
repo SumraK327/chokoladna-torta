@@ -1,1 +1,42 @@
-!function(){let s=document.getElementById("tasks"),e=document.getElementById("diplom"),t=document.getElementById("tasksBlock"),l=document.getElementById("diplomBlock"),i=document.getElementById("burger"),o=document.getElementById("sidebar"),c=document.getElementById("overlay"),d=document.getElementById("body");s.onclick=function(){e.classList.remove("active"),this.classList.add("active"),t.classList.remove("hidden"),l.classList.add("hidden"),o.classList.remove("show"),c.classList.remove("show")},e.onclick=function(){s.classList.remove("active"),this.classList.add("active"),l.classList.remove("hidden"),t.classList.add("hidden"),o.classList.remove("show"),c.classList.remove("show")},i.onclick=function(){d.classList.toggle("overflow"),c.classList.toggle("show"),o.classList.toggle("show")}}();
+!(function () {
+  const tasks = document.getElementById("tasks");
+  const diplom = document.getElementById("diplom");
+  const tasksBlocks = document.querySelectorAll(".tasks-block");
+  const diplomBlock = document.getElementById("diplomBlock");
+  const burger = document.getElementById("burger");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const body = document.getElementById("body");
+
+  tasks.onclick = function () {
+    diplom.classList.remove("active");
+    this.classList.add("active");
+
+    tasksBlocks.forEach((block) => {
+      block.classList.remove("hidden");
+    });
+
+    diplomBlock.classList.add("hidden");
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
+  };
+
+  diplom.onclick = function () {
+    tasks.classList.remove("active");
+    this.classList.add("active");
+
+    tasksBlocks.forEach((block) => {
+      block.classList.add("hidden");
+    });
+
+    diplomBlock.classList.remove("hidden");
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
+  };
+
+  burger.onclick = function () {
+    body.classList.toggle("overflow");
+    overlay.classList.toggle("show");
+    sidebar.classList.toggle("show");
+  };
+})();
