@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="html" lang="ru">
+  <head>
+    <link rel="stylesheet" href="./css/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/js-favicon.ico" type="image/x-icon" />
+
+    <title>Tortik vs js</title>
+
+    <script src="./js/main.js"></script>
+  </head>
+
+  <body class="body">
+    <div class="back">
+      <a href="https://sumrak327.github.io/chokoladna-torta/">
+        <button class="button">← Назад</button>
+      </a>
+    </div>
+    <div id="header"></div>
+    <main class="main">
+      <section class="intro">
+        <div class="container"></div>
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script type="module">
+      const headerResponse = await fetch("./header.html");
+      const headerHtml = await headerResponse.text();
+
+      document.getElementById("header").innerHTML = headerHtml;
+
+      const footerResponse = await fetch("./footer.html");
+      const footerHtml = await footerResponse.text();
+
+      document.getElementById("footer").innerHTML = footerHtml;
+
+      await import("./js/index.js");
+    </script>
+  </body>
+</html>

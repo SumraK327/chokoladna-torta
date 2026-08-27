@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/Reset.css" />
+    <link rel="stylesheet" href="./css/Main.css" />
+    <link rel="stylesheet" href="./css/Header.css" />
+    <link rel="stylesheet" href="./css/Footer.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tortik</title>
+  </head>
+
+  <body>
+    <div class="back">
+      <a href="https://sumrak327.github.io/chokoladna-torta/">
+        <button>← Назад</button>
+      </a>
+    </div>
+    <div id="header"></div>
+    <div class="container">
+      
+    </div>
+    <section class="program">
+      <div class="container flex-program">
+        <div class="program__box-l">
+          <h1>Подтянутое тело <strong>за месяц</strong> тренировок</h1>
+          <p>
+            Программа тренировки включает в себя разнообразные упражнения,
+            направленные на развитие силы и мышечного тонуса.
+          </p>
+          <a class="button" href="#">Посмотреть программу</a>
+        </div>
+        <div class="program__box-r">
+          <img src="./img/man-woman.jpg" alt="" />
+					<p>1510 Kb /\</p>
+          <img src="./img/man-woman2.jpg" alt="" />
+					<p>295 Kb /\</p>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <div class="container">
+        <h2>Последние новости</h2>
+        <div class="news-container">
+          <article class="news-article">
+            <header>
+              <img src="./img/News-img-1.jpg" alt="" />
+              <time datetime="2048-07-10">10.07.2048</time>
+              <h3>Открытие нового филиала в центре города!</h3>
+            </header>
+            <footer>
+              <a class="news-link" href="#">Подробнее</a>
+            </footer>
+          </article>
+          <article class="news-article">
+            <header>
+              <img src="./img/News-img-2.jpg" alt="" />
+              <time datetime="2048-07-15">15.07.2048</time>
+              <h3>Запуск новой программы тренировок для начинающих</h3>
+            </header>
+
+            <footer>
+              <a class="news-link" href="#">Подробнее</a>
+            </footer>
+          </article>
+          <article class="news-article">
+            <header>
+              <img src="./img/News-img-3.jpg" alt="" />
+              <time datetime="2048-07-20">20.07.2048</time>
+              <h3>Специальное предложение для студентов и школьников</h3>
+            </header>
+            <footer>
+              <a class="news-link" href="#">Подробнее</a>
+            </footer>
+          </article>
+          <article class="news-article">
+            <header>
+              <img src="./img/News-img-4.jpg" alt="" />
+              <time datetime="2048-07-35">35.07.2048</time>
+              <h3>Открыт конкурс на лучший фитнес-челлендж</h3>
+            </header>
+            <footer>
+              <a class="news-link" href="#">Подробнее</a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="questions">
+      <div class="container"></div>
+    </section>
+
+    <div id="footer"></div>
+    <script>
+      fetch("header.html")
+        .then((r) => r.text())
+        .then((h) => (document.getElementById("header").innerHTML = h));
+      fetch("footer.html")
+        .then((r) => r.text())
+        .then((f) => (document.getElementById("footer").innerHTML = f));
+    </script>
+  </body>
+</html>

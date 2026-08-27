@@ -1,0 +1,86 @@
+.back {
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+}
+.container {
+	margin: 10px auto;
+	padding: 0px;
+	max-width: 1220px;
+	border: 0px solid rgba(150, 101, 240, 0.4) ;
+}
+.container ul li {
+	margin: 6px 0 6px 16px;
+}
+.container ul {
+	margin: 0 0 80px 0;
+}
+.container ul li::marker {
+	font-size: 20px;
+	color: #3596ED;
+}
+header {
+	border-bottom: 1px solid #D3CBD9 ;
+	min-height: 105px;
+	margin: 0 0 80px 0;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+	margin: 0;
+	padding: 0;
+	width: 84px;
+	height: 45px;
+}
+.number {
+	text-align: right;
+}
+.number__text {
+	color: #858E8A;
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+.number__telephone {
+	font-weight: 500;
+	font-size: 18px;
+	color: #2C332F;
+}
+main {
+	font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+	margin: 0 0 40px 0;
+	max-width: 596px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 600;
+	color: #2C332F;
+	font-size: 48px;
+	line-height: 115%;
+	text-transform: uppercase;
+}
+footer {
+}
+main img {
+	margin: 80px 0 80px 0;
+}
+main video {
+	margin: 0 0 40px 0;
+}
+h2 {
+	margin: 0 0 40px 0;
+	font-family: "Oswald", sans-serif;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 115%;
+	text-transform: uppercase;
+	color: #2C332F;
+}
+. {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}

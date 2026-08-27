@@ -1,0 +1,151 @@
+.flex {
+	display: flex;
+	
+}
+.container {
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	max-width: 1220px;
+}
+.back {
+	margin: 0 0 10px 0;
+  padding: 10px 0;
+	border-bottom: 1px solid #87ffbb86;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+	border: 0px solid #fc2727;
+}
+.header {
+	min-height: 105px;
+	border-bottom: 1px solid #87ffbb86;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.logo {
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	height: 31px;
+}
+.logo a, .number__telephone a {
+	margin: 0;
+	padding: 0;
+}
+.number {
+	text-align: right;
+}
+.number__text {
+	margin: 8px 0;
+	color: #dbffef;
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+.number__telephone {
+	margin: 8px 0;
+	font-weight: 500;
+	font-size: 18px;
+	color: #87ffbb;
+}
+.section1 {
+	margin: 0 0 0 0;
+	padding: 30px 0 30px 0;
+	min-height: 100px;
+	border: 0px solid #272bfc;
+	background: #87ffbb05;
+}
+.section2 {
+	margin: 0 0 0 0;
+	padding: 30px 0 30px 0;
+	min-height: 100px;
+	border: 0px solid #eefc27;
+	background: #0457f105;
+}
+.form1 {
+	margin: 0 auto;
+	padding: 5px;
+	max-width: 500px;
+	border: 1px solid #87ffbb50;
+	text-align: center;
+}
+.form1__input {
+	margin: 0 auto;
+	max-width: 300px;
+	color: #;
+}
+.form1__input textarea {
+	width: 100%;
+	margin: 5px 0;
+	border: 1px solid #87ffbb50;
+	background-color: #000;
+	color: #e8e0f0;
+}
+.form1__input > input {
+	margin: 5px 0;
+	width: 100%;
+	background-color: #000;
+	border: 1px solid #87ffbb50;
+	color: #e8e0f0;
+}
+.form1__button {
+	display: flex;
+	justify-content: space-between;
+}
+.form1__input > label{
+	display: flex;
+	text-align: left;
+	padding: 0 0 0 23px;
+	margin: 5px 0;
+}
+.checkbox {
+	appearance: none;
+	outline: none;
+	position: absolute;
+}
+.checkbox::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	border: 1px solid #87ffbb50;
+	position: absolute;
+	margin: -1px 0 0 -33px;
+	cursor: pointer;
+}
+.checkbox:focus-visible {
+	outline: none;
+}
+.checkbox:focus-visible::before,
+input:focus-visible,
+textarea:focus-visible  {
+	outline: 2px solid #4a90d9;
+  outline-offset: 2px;
+}
+.checkbox:checked::before {
+	content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../img/checkbox-active1.svg) no-repeat center #87ffbb50;
+  position: absolute;
+  margin: -1px 0 0 -33px;
+  cursor: pointer;
+	border: none;
+}
+.remark {
+	border: 2px solid #fc2727;
+	margin: 0 0 40px 0;
+	padding: 5px;
+/*
+. {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	max-width: ;
+	min-height: ;
+	border: 0px solid #2747fc;
+}
+	*/

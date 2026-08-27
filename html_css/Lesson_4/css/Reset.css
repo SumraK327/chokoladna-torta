@@ -1,0 +1,118 @@
+html {
+  scroll-behavior: smooth;
+	border: 0px solid rgba(21, 17, 255, 0.4) ;
+	
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: #535755;
+  background-color: #fff;
+	margin: 0 0 0 0;
+	padding: 5px;
+	border: 0px solid rgb(255, 25, 17) ;
+	
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #00e1ff;
+}
+a:hover {
+	color: #ffd54f;
+}
+ul,
+ol {
+  list-style: ;
+}
+button {
+	margin: 5px;
+  background: #b39ddb;
+  color: #0a0a0a;
+  border-radius: 0px;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	border-radius: 0px 20px 0px 20px;
+}
+button:hover {
+  filter: brightness(1.9);
+	box-shadow: 0px 0px 20px rgba(113, 38, 252, 0.527);
+}
+input,
+textarea {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+a,
+button,
+input,
+textarea {
+  transition: all 0.7s ease;
+	padding: 5px 10px;
+}
+textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #4a90d9;
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 5px 0;
+  color: #000;
+  line-height: 1.2;
+	font-family: 'Montserrat', sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+video,
+iframe {
+  max-width: 100%;
+  display: block;
+}
+
+label {
+  
+}
+.checkbox {
+	cursor: pointer;
+}
+p {
+	margin: 0px 0 20px 0;
+	padding: 0;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	font-family: "Ubuntu", sans-serif;;
+}
