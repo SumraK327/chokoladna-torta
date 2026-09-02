@@ -139,14 +139,12 @@ section[id] {
   color: #ff6b6b;
 }
 
-/* Добавление задачи */
 .todo__add {
   display: flex;
   gap: 10px;
   margin-bottom: 30px;
 }
 
-/* Список задач */
 .todo__list {
   display: flex;
   flex-direction: column;

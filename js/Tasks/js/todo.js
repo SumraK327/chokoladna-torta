@@ -134,7 +134,6 @@ export const Todo = () => {
       return;
     }
 
-    // Конвертируем ГГГГ-ММ-ДД → ДД.ММ.ГГГГ
     const [year, month, day] = value.split("-");
     const formatted = `${day}.${month}.${year}`;
 
