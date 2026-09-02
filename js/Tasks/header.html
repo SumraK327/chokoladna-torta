@@ -1,0 +1,74 @@
+<header class="header">
+  <div class="container header__container">
+    <a href="##" class="header__logo">
+      <img src="./img/icons/logo.svg" alt="" class="header__img" />
+    </a>
+    <nav class="menu header__menu" id="header__menu" aria-label="Основное меню">
+      <ul class="menu__list" role="list">
+        <li class="menu__item">
+          <a href="##" class="menu__link link-after">Test 1</a>
+        </li>
+        <li class="menu__item">
+          <a href="##" class="menu__link link-after">Test 2</a>
+        </li>
+        <li class="menu__item">
+          <a href="##" class="menu__link link-after">Test 3</a>
+        </li>
+        <li class="menu__item">
+          <a href="##" class="menu__link link-after">Test 4</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="controls">
+      <button class="controls__search" title="Поиск" aria-label="Поиск">
+        <svg width="24" height="24">
+          <use
+            class="header__actions-icon"
+            href="./img/icons/sprite.svg#search"
+          ></use>
+        </svg>
+      </button>
+
+      <button class="controls__basket" title="Корзина" aria-label="Корзина">
+        <svg width="24" height="24">
+          <use
+            class="header__actions-icon"
+            href="./img/icons/sprite.svg#basket"
+          ></use>
+        </svg>
+      </button>
+
+      <button
+        class="controls__back-to-top"
+        title="Поднять экран вверх"
+        aria-label="Поднять экран вверх"
+      >
+        <svg>
+          <use
+            class="header__actions-icon"
+            href="./img/icons/arrow-up.svg"
+          ></use>
+        </svg>
+      </button>
+
+      <button
+        class="controls__burger burger"
+        title="Открыть меню"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+        aria-controls="header__menu"
+      >
+        <svg width="27" height="27">
+          <use
+            class="header__actions-icon burger__icon"
+            href="./img/icons/sprite.svg#menu-burger"
+          ></use>
+          <use
+            class="header__actions-icon burger__icon-cross"
+            href="./img/icons/sprite.svg#cross"
+          ></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

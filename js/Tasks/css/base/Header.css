@@ -1,0 +1,136 @@
+.header {
+  background: var(--bg-color);
+  transition: all var(--transition-time) ease;
+}
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  margin: 0 0 30px 0;
+}
+.header--fixed {
+  box-shadow: 0 10px 20px -15px var(--shadow-color);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+.header__logo {
+  flex-shrink: 0;
+}
+
+.accent {
+  color: #00c3ff;
+}
+.menu__list {
+  display: flex;
+  gap: 33px;
+  text-transform: uppercase;
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+}
+.menu__link {
+}
+.menu__link--dropdown {
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+}
+.menu__link--dropdown::after {
+  content: "";
+  margin: 0 0 0 3px;
+  width: 12px;
+  height: 14px;
+  background-color: #070847;
+  mask-image: url("../../img/icons/arrow-down.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.controls {
+  display: flex;
+  gap: 21px;
+  flex-shrink: 0;
+}
+.header__actions-icon {
+  transition: all var(--transition-time) ease;
+  color: #fff;
+}
+.controls__back-to-top {
+  width: 50px;
+  height: 50px;
+  transition: all 1.5s ease;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+@media (any-hover: hover) {
+  .controls__search:hover .header__actions-icon,
+  .controls__basket:hover .header__actions-icon,
+  .controls__burger:hover .header__actions-icon {
+    opacity: 0.4;
+  }
+}
+.controls__burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .controls__burger {
+    position: relative;
+    display: block;
+    z-index: 101;
+  }
+  .controls {
+    gap: 35px;
+  }
+  .header__menu {
+    padding: 144px 15px 0 10px;
+    position: fixed;
+    right: -100vw;
+    top: 0;
+    bottom: 0;
+    background: var(--bg-article);
+    min-width: 300px;
+    z-index: 100;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: -10px 0 20px -15px var(--shadow-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-time) ease;
+  }
+  .header__menu--open {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .header__menu .menu__list {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+  }
+  .burger__icon,
+  .burger--open .burger__icon-cross {
+    display: block;
+  }
+
+  .burger__icon-cross,
+  .burger--open .burger__icon {
+    display: none;
+  }
+  .header__actions-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .header__logo {
+    width: 130px;
+  }
+}

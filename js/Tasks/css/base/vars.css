@@ -1,0 +1,29 @@
+:root {
+  /* fonts */
+  --font-family: "Inter", sans-serif;
+  --second-family: "Onest", sans-serif;
+  --third-family: "ReadexPro", sans-serif;
+
+  /* colors */
+  --bg-color: #000000;
+  --text-color: #f0f5fa;
+  --bg-article: #f0f5fa;
+  --text-article: #4b4b4b;
+  --main-color: #ffffff;
+  --search-color: #c5c5c5;
+
+  --link-color: #b0aae7;
+  --link-hover-color: #6316a6;
+
+  --color-button-bg: #dce5e2;
+  --color-button-text: #000;
+
+  --heading-color: #000;
+
+  /* shadows */
+  /* .header--fixed, .header__menu (burger)  */
+  --shadow-color: rgb(233, 235, 255);
+
+  /* transitions */
+  --transition-time: 0.5s;
+}

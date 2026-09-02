@@ -1,0 +1,287 @@
+.flex {
+  display: flex;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1270px;
+  padding: 0 15px;
+}
+.back {
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(150, 101, 240, 0.685);
+}
+.remark {
+  border: 2px solid #fc2727;
+  margin: 0 0 40px 0;
+  padding: 5px;
+}
+.main {
+  /* border: 1px solid rgba(150, 101, 240, 0.685); */
+  min-height: 220px;
+  flex: 1;
+}
+.main > * {
+  padding: 1px 0;
+  /* min-width: 320px, max-width: 900px*/
+  margin: 0 0 clamp(80px, 3.621rem + 6.9vw, 120px) 0;
+  /* border: 1px solid rgba(150, 101, 240, 0.685); */
+}
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/*-------------- Todo --------------*/
+.todo {
+  padding: 60px 0;
+}
+
+.todo__title {
+  margin-bottom: 30px;
+}
+
+.todo__add-date {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo__date-input,
+.todo__input {
+  flex: 1;
+  padding: 12px 16px;
+  background: #1a1a1a;
+  border: 1px solid var(--link-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 16px;
+}
+
+.todo__date-input::placeholder,
+.todo__input::placeholder {
+  color: var(--search-color);
+}
+
+.todo__date-input:focus,
+.todo__input:focus {
+  outline: none;
+  border-color: var(--link-hover-color);
+}
+
+.todo__add-date-btn,
+.todo__add-btn {
+  padding: 12px 20px;
+  background: var(--link-color);
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-time) ease;
+}
+
+.todo__add-date-btn:hover,
+.todo__add-btn:hover {
+  background: var(--link-hover-color);
+  color: #fff;
+}
+
+/* Вкладки дат */
+.todo__date-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.todo__date-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.todo__date-link {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--link-color);
+  color: var(--link-color);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 14px;
+  transition: all var(--transition-time) ease;
+}
+
+.todo__date-link:hover {
+  background: rgba(176, 170, 231, 0.1);
+}
+
+.todo__date-link--active {
+  background: var(--link-color);
+  color: #000;
+}
+
+.todo__date-link--active:hover {
+  background: var(--link-hover-color);
+  color: #fff;
+}
+
+.todo__date-delete {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: var(--search-color);
+  cursor: pointer;
+  font-size: 14px;
+  transition: color var(--transition-time) ease;
+}
+
+.todo__date-delete:hover {
+  color: #ff6b6b;
+}
+
+/* Добавление задачи */
+.todo__add {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Список задач */
+.todo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.todo__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: #1a1a1a;
+  border: 1px solid rgba(176, 170, 231, 0.2);
+}
+
+.todo__checkbox {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 2px solid var(--link-color);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-time) ease;
+}
+
+.todo__checkbox:hover {
+  border-color: var(--link-hover-color);
+}
+
+.todo__checkbox.done {
+  background: var(--link-color);
+  border-color: var(--link-color);
+}
+
+.todo__checkbox.done::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 14px;
+}
+
+.todo__text {
+  flex: 1;
+  color: var(--text-color);
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.todo__text.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo__delete {
+  padding: 5px;
+  background: none;
+  border: none;
+  color: var(--search-color);
+  cursor: pointer;
+  font-size: 18px;
+  transition: color var(--transition-time) ease;
+}
+
+.todo__delete:hover {
+  color: #ff6b6b;
+}
+
+/* Футер */
+.todo__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.todo__counter {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.todo__counter-value {
+  color: var(--link-color);
+  font-weight: 600;
+}
+
+.todo__clear-done {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid var(--link-color);
+  color: var(--link-color);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 14px;
+  transition: all var(--transition-time) ease;
+}
+
+.todo__clear-done:hover {
+  background: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+  color: #fff;
+}
+.todo__number {
+  color: var(--search-color);
+  font-size: 14px;
+  min-width: 25px;
+  flex-shrink: 0;
+}
+.todo__date-reset {
+  padding: 12px;
+  background: none;
+  border: 1px solid var(--link-color);
+  color: var(--search-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: all var(--transition-time) ease;
+}
+
+.todo__date-reset:hover {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+/*-------------- 1 --------------*/
+/*
+. {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	max-width: ;
+	min-height: ;
+	border: 1px solid rgba(150, 101, 240, 0.685);
+}
+	*/

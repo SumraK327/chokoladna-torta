@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="html" lang="ru">
+  <head>
+    <link rel="stylesheet" href="./css/index.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+    <title>Tortik</title>
+  </head>
+
+  <body class="body">
+    <div class="back">
+      <a href="https://sumrak327.github.io/chokoladna-torta/">
+        <button class="button">← Назад</button>
+      </a>
+    </div>
+    <div id="header"></div>
+    <main class="main">
+      <section class="todo">
+        <div class="container">
+          <h2 class="todo__title title-h2">Ежедневник</h2>
+          <!-- Добавление новой даты -->
+          <div class="todo__add-date">
+            <button class="todo__date-reset" aria-label="Сбросить дату">
+              ✕
+            </button>
+            <input
+              class="todo__date-input"
+              type="date"
+              aria-label="Выберите дату"
+            />
+            <button class="todo__add-date-btn" aria-label="Добавить дату">
+              +
+            </button>
+          </div>
+          <!-- Вкладки дат (сюда JS будет добавлять новые) -->
+          <ul class="todo__date-list">
+            <li class="todo__date-item">
+              <button class="todo__date-link todo__date-link--active">
+                03.09.2026
+              </button>
+              <button class="todo__date-delete" aria-label="Удалить дату">
+                ✕
+              </button>
+            </li>
+          </ul>
+          <!-- Добавление задачи -->
+          <div class="todo__add">
+            <input
+              class="todo__input"
+              type="text"
+              placeholder="Новая задача..."
+              aria-label="Текст задачи"
+            />
+            <button class="todo__add-btn" aria-label="Добавить задачу">
+              +
+            </button>
+          </div>
+          <!-- Список задач (JS будет наполнять) -->
+          <ul class="todo__list">
+            <li class="todo__item">
+              <button
+                class="todo__checkbox"
+                aria-label="Выполнить задачу"
+              ></button>
+              <span class="todo__text">Пример задачи</span>
+              <button class="todo__delete" aria-label="Удалить задачу">
+                ✕
+              </button>
+            </li>
+          </ul>
+          <!-- Футер: счётчик + очистка -->
+          <div class="todo__footer">
+            <p class="todo__counter">
+              Активных задач: <span class="todo__counter-value">1</span>
+            </p>
+            <button class="todo__clear-done">Очистить выполненные</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script type="module">
+      const headerResponse = await fetch("./header.html");
+      const headerHtml = await headerResponse.text();
+
+      document.getElementById("header").innerHTML = headerHtml;
+
+      const footerResponse = await fetch("./footer.html");
+      const footerHtml = await footerResponse.text();
+
+      document.getElementById("footer").innerHTML = footerHtml;
+
+      await import("./js/index.js");
+    </script>
+  </body>
+</html>
