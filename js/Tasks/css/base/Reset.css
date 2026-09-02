@@ -54,6 +54,14 @@ h6 {
   line-height: 120%;
   color: var(--main-color);
 }
+.title-h2 {
+  font-family: var(--second-family);
+  font-weight: 400;
+  /* min-width: 320px, max-width: 900px*/
+  font-size: 30px;
+  line-height: 120%;
+  color: var(--main-color);
+}
 
 /* ===== Медиа ===== */
 img {
