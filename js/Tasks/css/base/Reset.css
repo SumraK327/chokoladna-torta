@@ -134,8 +134,7 @@ button {
 }
 
 .button:hover {
-  filter: brightness(1.9);
-  box-shadow: 0 0 20px rgba(113, 38, 252, 0.527);
+  box-shadow: 0 0 20px 8px #6d24b1;
 }
 
 /* Убираем стандартные стили для кнопок в Firefox */
