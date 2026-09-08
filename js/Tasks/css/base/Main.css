@@ -33,7 +33,7 @@ section[id] {
 
 /*-------------- Todo --------------*/
 .todo {
-  padding: 60px 0;
+  padding: 20px 0 60px 0;
 }
 
 .todo__title {

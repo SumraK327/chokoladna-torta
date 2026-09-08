@@ -15,7 +15,7 @@
         <button class="button">← Назад</button>
       </a>
     </div>
-    <div id="header"></div>
+    <!-- <div id="header"></div> -->
     <main class="main">
       <section class="todo">
         <div class="container">
@@ -75,19 +75,7 @@
         </div>
       </section>
     </main>
-    <div id="footer"></div>
-    <script type="module">
-      const headerResponse = await fetch("./header.html");
-      const headerHtml = await headerResponse.text();
-
-      document.getElementById("header").innerHTML = headerHtml;
-
-      const footerResponse = await fetch("./footer.html");
-      const footerHtml = await footerResponse.text();
-
-      document.getElementById("footer").innerHTML = footerHtml;
-
-      await import("./js/index.js");
-    </script>
+    <!-- <div id="footer"></div> -->
+    <script type="module" src="./js/init.js"></script>
   </body>
 </html>
